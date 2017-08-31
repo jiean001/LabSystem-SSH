@@ -2,12 +2,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.aa</groupId>
-	<artifactId>ssh</artifactId>
+	<groupId>org.labsystem</groupId>
+	<artifactId>Labsystem-SSH</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>demo_ssh</name>
+	<name>Labsystem-SSH</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

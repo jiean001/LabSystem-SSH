@@ -9,11 +9,9 @@ import org.labsystem.entity.Category;
 import org.labsystem.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Results({
-	@Result(name="list", location="/admin/category_list.jsp"),
-	@Result(name="relist", type="redirect", location="categoryList.action"),
-})
-public class CategoryAction extends BaseAction{
+@Results({ @Result(name = "list", location = "/admin/category_list.jsp"),
+		@Result(name = "relist", type = "redirect", location = "categoryList.action"), })
+public class CategoryAction extends BaseAction {
 
 	private Category category;
 	private List<Category> categoryList;
@@ -21,37 +19,38 @@ public class CategoryAction extends BaseAction{
 	@Autowired
 	private CategoryService categoryService;
 
-
 	/**
 	 * 列表
+	 * 
 	 * @return
 	 */
 	@Action("categoryList")
-	public String list(){
+	public String list() {
 		categoryList = categoryService.getCategoryList();
 		return "list";
 	}
 
 	/**
 	 * 保存
+	 * 
 	 * @return
 	 */
 	@Action("categorySave")
-	public String save(){
+	public String save() {
 		categoryService.addCategory(category);
 		return "relist";
 	}
 
 	/**
 	 * 删除
+	 * 
 	 * @return
 	 */
 	@Action("categoryDelete")
-	public String delete(){
+	public String delete() {
 		categoryService.deleteCategory(category);
 		return "relist";
 	}
-
 
 	public Category getCategory() {
 		return category;

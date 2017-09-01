@@ -14,57 +14,56 @@ import org.labsystem.util.PageUtil;
 import org.labsystem.util.UploadUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
-
-@Results({
-	@Result(name="list", location="/admin/product_list.jsp"),
-	@Result(name="add", location="/admin/product_add.jsp"),
-	@Result(name="edit", location="/admin/product_edit.jsp"),
-	@Result(name="relist", type="redirect", location="productList.action"),
-})
-public class ProductAction extends BaseAction{
+@Results({ @Result(name = "list", location = "/admin/product_list.jsp"),
+		@Result(name = "add", location = "/admin/product_add.jsp"),
+		@Result(name = "edit", location = "/admin/product_edit.jsp"),
+		@Result(name = "relist", type = "redirect", location = "productList.action"), })
+public class ProductAction extends BaseAction {
 
 	private Product product;
 	private List<Product> productList;
 	private List<Category> categoryList;
 
 	// 由status2自动将上传文件进行装配到以下属性
-	private File upload;		//获取上传文件
-	private String uploadFileName;	//获取上传文件名称
-	private String uploadContentType;		//获取上传文件类型
+	private File upload; // 获取上传文件
+	private String uploadFileName; // 获取上传文件名称
+	private String uploadContentType; // 获取上传文件类型
 
 	@Autowired
 	private ProductService productService;
 	@Autowired
 	private CategoryService categoryService;
 
-
 	/**
 	 * 列表
+	 * 
 	 * @return
 	 */
 	@Action("productList")
-	public String list(){
-		productList = productService.getProductList((page-1)*rows,rows);
+	public String list() {
+		productList = productService.getProductList((page - 1) * rows, rows);
 		pageTool = PageUtil.getPageTool(servletRequest, productService.getProductTotal(), page, rows);
 		return "list";
 	}
 
 	/**
 	 * 编辑
+	 * 
 	 * @return
 	 */
 	@Action("productAdd")
-	public String add(){
+	public String add() {
 		categoryList = categoryService.getCategoryList();
 		return "add";
 	}
 
 	/**
 	 * 保存
+	 * 
 	 * @return
 	 */
 	@Action("productSave")
-	public String save(){
+	public String save() {
 		product.setPhoto(UploadUtil.fileUpload(upload, uploadFileName, "photo"));
 		productService.addProduct(product);
 		return "relist";
@@ -72,10 +71,11 @@ public class ProductAction extends BaseAction{
 
 	/**
 	 * 编辑
+	 * 
 	 * @return
 	 */
 	@Action("productEdit")
-	public String edit(){
+	public String edit() {
 		categoryList = categoryService.getCategoryList();
 		product = productService.getProductById(product.getId());
 		return "edit";
@@ -83,17 +83,18 @@ public class ProductAction extends BaseAction{
 
 	/**
 	 * 更新
+	 * 
 	 * @return
 	 */
 	@Action("productUpdate")
-	public String update(){
+	public String update() {
 		String photo = UploadUtil.fileUpload(upload, uploadFileName, "photo");
-		if (photo!=null && !photo.trim().isEmpty()) {
+		if (photo != null && !photo.trim().isEmpty()) {
 			product.setPhoto(photo);
 		}
-		if(productService.updateProduct(product)){
+		if (productService.updateProduct(product)) {
 			getRequest().put("msg", "更新成功!");
-		}else{
+		} else {
 			getRequest().put("msg", "更新失败!");
 		}
 		return "relist";
@@ -101,14 +102,14 @@ public class ProductAction extends BaseAction{
 
 	/**
 	 * 删除
+	 * 
 	 * @return
 	 */
 	@Action("productDelete")
-	public String delete(){
+	public String delete() {
 		productService.deleteProduct(product);
 		return "relist";
 	}
-
 
 	public Product getProduct() {
 		return product;

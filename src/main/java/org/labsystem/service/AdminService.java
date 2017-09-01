@@ -7,36 +7,38 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service	// 注解为service层spring管理bean
-@Transactional	// 注解此类所有方法加入spring事务, 具体设置默认
+@Service // 注解为service层spring管理bean
+@Transactional // 注解此类所有方法加入spring事务, 具体设置默认
 public class AdminService {
 
-	@Autowired		//spring注入类对象
+	@Autowired // spring注入类对象
 	private AdminDao adminDao;
-
 
 	/**
 	 * 验证用户密码
+	 * 
 	 * @param username
 	 * @param password
 	 * @return
 	 */
-	public boolean checkUser(String username, String password){
+	public boolean checkUser(String username, String password) {
 		Admin user = adminDao.selectByUsername(username);
-		return user!=null && user.getPassword().equals(SafeUtil.encode(password));
+		return user != null && user.getPassword().equals(SafeUtil.encode(password));
 	}
 
 	/**
 	 * 通过id获取
+	 * 
 	 * @param userid
 	 * @return
 	 */
-	public Admin getByUsername(String username){
+	public Admin getByUsername(String username) {
 		return adminDao.selectByUsername(username);
 	}
 
 	/**
 	 * 更新
+	 * 
 	 * @param admin
 	 */
 	public boolean update(Admin admin) {

@@ -11,9 +11,8 @@ public class PaperDaoImpl extends GenericDaoImpl<Paper, Integer> implements Pape
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Paper> findAll() {
-		//TODO cache
-		List<Paper> professionaltitleTbls = this.getSession()
-				.createQuery("from Paper").list();
+		// TODO cache
+		List<Paper> professionaltitleTbls = this.getSession().createQuery("from Paper").list();
 		return professionaltitleTbls;
 	}
 

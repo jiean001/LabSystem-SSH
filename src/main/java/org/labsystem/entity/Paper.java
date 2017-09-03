@@ -17,7 +17,7 @@ public class Paper implements java.io.Serializable {
 	private static final long serialVersionUID = 7199868885947084061L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "paper_id")
 	private Integer paperId;
 	@Column(name = "papername_C")
@@ -28,10 +28,13 @@ public class Paper implements java.io.Serializable {
 	private String paperbriefintroC;
 	@Column(name = "paperbriefintro_E")
 	private String paperbriefintroE;
+	@Column(name = "paperLink")
 	private String paperLink;
+	@Column(name = "papertype")
 	private Integer papertype;
 	@Column(name = "papersource_Id")
 	private Integer papersourceId;
+	@Column(name = "papertime")
 	private Date papertime;
 
 	public Paper() {
@@ -119,6 +122,21 @@ public class Paper implements java.io.Serializable {
 
 	public void setPapertime(Date papertime) {
 		this.papertime = papertime;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder str = new StringBuilder();
+		str.append("paperId:").append(this.paperId);
+		str.append(", papernameC:").append(this.papernameC);
+		str.append(", papernameE:").append(this.papernameE);
+		str.append(", paperbriefintroC:").append(this.paperbriefintroC);
+		str.append(", paperbriefintroE:").append(this.paperbriefintroE);
+		str.append(", paperLink:").append(this.paperLink);
+		str.append(", papertype:").append(this.papertype);
+		str.append(", papersourceId:").append(this.papersourceId);
+		str.append(", papertime:").append(this.papertime);
+		return str.toString();
 	}
 
 }

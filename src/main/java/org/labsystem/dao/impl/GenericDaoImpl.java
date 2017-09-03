@@ -12,7 +12,7 @@ import org.labsystem.dao.iface.GenericDao;
 import org.springframework.stereotype.Repository;
 
 @Repository("GenericDao")
-public class GenericDaoImpl <T, PK extends Serializable > implements GenericDao<T, PK> {
+public class GenericDaoImpl<T, PK extends Serializable> implements GenericDao<T, PK> {
 	@Resource
 	private SessionFactory sessionFactory;
 	private Session session;

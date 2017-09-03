@@ -12,10 +12,8 @@ public class PaperDaoImpl extends GenericDaoImpl<Paper, Integer> implements Pape
 	@Override
 	public List<Paper> findAll() {
 		//TODO cache
-		System.out.println("getALL--");
 		List<Paper> professionaltitleTbls = this.getSession()
-				.createQuery("from paper").list();
-		System.out.println("getALL-- 11" + (professionaltitleTbls == null));
+				.createQuery("from Paper").list();
 		return professionaltitleTbls;
 	}
 

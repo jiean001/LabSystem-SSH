@@ -18,6 +18,7 @@ public class Paper implements java.io.Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "paper_id")
 	private Integer paperId;
 	@Column(name = "papername_C")
 	private String papernameC;

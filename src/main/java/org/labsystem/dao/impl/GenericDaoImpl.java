@@ -67,7 +67,6 @@ public class GenericDaoImpl <T, PK extends Serializable > implements GenericDao<
 
 	@Override
 	public List<T> findAll() {
-		System.out.println("getALL-- 22");
 		return null;
 	}
 }

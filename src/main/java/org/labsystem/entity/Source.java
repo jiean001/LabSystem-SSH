@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity // hibernate模型 对应数据库中paper
-@Table(name = "source") // 指定数据库中的表
+@Entity
+@Table(name = "source")
 public class Source implements java.io.Serializable {
 
 	private static final long serialVersionUID = -2797464089860772569L;

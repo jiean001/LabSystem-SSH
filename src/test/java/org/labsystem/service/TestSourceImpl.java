@@ -1,19 +1,14 @@
 package org.labsystem.service;
 
 import org.apache.log4j.Logger;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.labsystem.domain.service.iface.SourceService;
 import org.labsystem.entity.Source;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 
 import com.alibaba.fastjson.JSON;
 
-@RunWith(JUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:spring.xml", "struts.xml" })
 public class TestSourceImpl {
-	private static final Logger LOGGER = Logger.getLogger(TestPaperService.class);
+	private static final Logger LOGGER = Logger.getLogger(TestSourceImpl.class);
 
 	@Autowired
 	private SourceService sourceService;
@@ -28,7 +23,7 @@ public class TestSourceImpl {
 		LOGGER.info("testGetAllSource" + JSON.toJSONString(sourceService.getAllSource()));
 	}
 
-	@Test
+	// @Test
 	public void testMain() {
 		System.out.println("111111111111111111111");
 		testGetSource();

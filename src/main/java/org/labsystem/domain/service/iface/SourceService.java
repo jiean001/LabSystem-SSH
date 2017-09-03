@@ -8,5 +8,4 @@ public interface SourceService {
 	Source getSource(int sourceId);
 
 	List<Source> getAllSource();
-
 }

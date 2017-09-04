@@ -11,9 +11,9 @@ import org.labsystem.util.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Results({ @Result(name = "list", location = "/admin/news_list.jsp"),
-	@Result(name = "add", location = "/admin/news_add.jsp"),
-	@Result(name = "edit", location = "/admin/news_edit.jsp"),
-	@Result(name = "relist", type = "redirect", location = "newsList.action"), })
+		@Result(name = "add", location = "/admin/news_add.jsp"),
+		@Result(name = "edit", location = "/admin/news_edit.jsp"),
+		@Result(name = "relist", type = "redirect", location = "newsList.action"), })
 public class NewsAction extends BaseAction {
 
 	private int rows = 5;

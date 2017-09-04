@@ -56,13 +56,13 @@ public class ResbelongServiceImpl implements ResbelongService {
 	}
 
 	@Override
-	public List<Teacher> getTeachersByResearch(Research project) {
+	public List<Teacher> getTeachersByResearch(Research research) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Student> getStudentsByReaearch(Research project) {
+	public List<Student> getStudentsByReaearch(Research research) {
 		// TODO Auto-generated method stub
 		return null;
 	}

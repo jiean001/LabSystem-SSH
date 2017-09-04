@@ -22,7 +22,7 @@ public interface ResbelongService {
 
 	List<Resbelong> getResbelongListByStudent(Student student);
 
-	List<Teacher> getTeachersByResearch(Research project);
+	List<Teacher> getTeachersByResearch(Research research);
 
-	List<Student> getStudentsByReaearch(Research project);
+	List<Student> getStudentsByReaearch(Research research);
 }

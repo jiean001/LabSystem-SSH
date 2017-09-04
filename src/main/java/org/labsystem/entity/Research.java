@@ -16,6 +16,8 @@ public class Research implements java.io.Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "research_id")
 	private Integer researchId;
+	@Column(name = "researchintropic")
+	private String researchintropic;
 	@Column(name = "researchname_c")
 	private String researchnameC;
 	@Column(name = "researchname_e")
@@ -28,11 +30,8 @@ public class Research implements java.io.Serializable {
 	public Research() {
 	}
 
-	public Research(String researchnameC) {
-		this.researchnameC = researchnameC;
-	}
-
-	public Research(String researchnameC, String researchnameE, String researchintroC, String researchintroE) {
+	public Research(String researchintropic, String researchnameC, String researchnameE, String researchintroC, String researchintroE) {
+		this.researchintropic = researchintropic;
 		this.researchnameC = researchnameC;
 		this.researchnameE = researchnameE;
 		this.researchintroC = researchintroC;

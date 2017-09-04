@@ -5,13 +5,13 @@ import java.util.List;
 import org.labsystem.entity.Student;
 
 public interface StudentService {
-	List<Student> getAllResearch();
+	List<Student> getAllStudents();
 
-	Student getResearch(int id);
+	Student getStudent(int id);
 
-	boolean addResearch(Student entity);
+	boolean addStudent(Student entity);
 
-	boolean modifyResearch(Student entity);
+	boolean modifyStudent(Student entity);
 
-	boolean deleteResearch(Student entity);
+	boolean deleteStudent(Student entity);
 }

@@ -16,27 +16,27 @@ public class StudentServiceImpl implements StudentService {
 	private StudentDao studentDao;
 
 	@Override
-	public List<Student> getAllResearch() {
+	public List<Student> getAllStudents() {
 		return studentDao.findAll();
 	}
 
 	@Override
-	public Student getResearch(int id) {
+	public Student getStudent(int id) {
 		return studentDao.get(id);
 	}
 
 	@Override
-	public boolean addResearch(Student entity) {
+	public boolean addStudent(Student entity) {
 		return studentDao.insert(entity) > 0;
 	}
 
 	@Override
-	public boolean modifyResearch(Student entity) {
+	public boolean modifyStudent(Student entity) {
 		return studentDao.update(entity);
 	}
 
 	@Override
-	public boolean deleteResearch(Student entity) {
+	public boolean deleteStudent(Student entity) {
 		return studentDao.delete(entity);
 	}
 

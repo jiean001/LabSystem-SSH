@@ -1,4 +1,4 @@
-package org.labsystem.dao.impl;
+package org.labsystem.domain.dao.impl;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository("SupervisortypeDao")
 public class SupervisortypeDaoImpl extends GenericDaoImpl<Supervisortype, Integer>
-implements org.labsystem.dao.iface.SupervisortypeDao {
+		implements org.labsystem.domain.dao.iface.SupervisortypeDao {
 	@Override
 	public List<Supervisortype> findAll() {
 		// TODO cache

@@ -3,7 +3,7 @@ package org.labsystem.domain.service.impl;
 import java.util.Date;
 import java.util.List;
 
-import org.labsystem.dao.iface.PaperDao;
+import org.labsystem.domain.dao.iface.PaperDao;
 import org.labsystem.domain.service.iface.PaperService;
 import org.labsystem.entity.Paper;
 import org.springframework.beans.factory.annotation.Autowired;

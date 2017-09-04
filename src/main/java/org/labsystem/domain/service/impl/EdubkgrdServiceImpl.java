@@ -2,7 +2,7 @@ package org.labsystem.domain.service.impl;
 
 import java.util.List;
 
-import org.labsystem.dao.iface.EdubkgrdDao;
+import org.labsystem.domain.dao.iface.EdubkgrdDao;
 import org.labsystem.domain.service.iface.EdubkgrdService;
 import org.labsystem.entity.Edubkgrd;
 import org.springframework.beans.factory.annotation.Autowired;

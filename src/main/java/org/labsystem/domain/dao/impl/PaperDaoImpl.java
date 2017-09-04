@@ -1,8 +1,8 @@
-package org.labsystem.dao.impl;
+package org.labsystem.domain.dao.impl;
 
 import java.util.List;
 
-import org.labsystem.dao.iface.PaperDao;
+import org.labsystem.domain.dao.iface.PaperDao;
 import org.labsystem.entity.Paper;
 import org.springframework.stereotype.Repository;
 

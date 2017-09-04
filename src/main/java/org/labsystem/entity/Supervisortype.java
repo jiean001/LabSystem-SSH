@@ -32,24 +32,27 @@ public class Supervisortype implements java.io.Serializable {
 		return this.supervisortypeId;
 	}
 
-	/*public void setSupervisortypeId(int supervisortypeId) {
-		this.supervisortypeId = supervisortypeId;
-	}*/
+	/*
+	 * public void setSupervisortypeId(int supervisortypeId) { this.supervisortypeId
+	 * = supervisortypeId; }
+	 */
 
 	public String getSupervisortypenameC() {
 		return this.supervisortypenameC;
 	}
 
-	/*public void setSupervisortypenameC(String supervisortypenameC) {
-		this.supervisortypenameC = supervisortypenameC;
-	}*/
+	/*
+	 * public void setSupervisortypenameC(String supervisortypenameC) {
+	 * this.supervisortypenameC = supervisortypenameC; }
+	 */
 
 	public String getSupervisortypenameE() {
 		return this.supervisortypenameE;
 	}
 
-	/*public void setSupervisortypenameE(String supervisortypenameE) {
-		this.supervisortypenameE = supervisortypenameE;
-	}*/
+	/*
+	 * public void setSupervisortypenameE(String supervisortypenameE) {
+	 * this.supervisortypenameE = supervisortypenameE; }
+	 */
 
 }

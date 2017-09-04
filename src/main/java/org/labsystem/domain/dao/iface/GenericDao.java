@@ -1,4 +1,4 @@
-package org.labsystem.dao.iface;
+package org.labsystem.domain.dao.iface;
 
 import java.io.Serializable;
 import java.util.List;

@@ -2,7 +2,7 @@ package org.labsystem.domain.service.impl;
 
 import java.util.List;
 
-import org.labsystem.dao.iface.SourceDao;
+import org.labsystem.domain.dao.iface.SourceDao;
 import org.labsystem.domain.service.iface.SourceService;
 import org.labsystem.entity.Source;
 import org.springframework.beans.factory.annotation.Autowired;

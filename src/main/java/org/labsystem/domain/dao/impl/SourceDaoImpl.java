@@ -1,8 +1,8 @@
-package org.labsystem.dao.impl;
+package org.labsystem.domain.dao.impl;
 
 import java.util.List;
 
-import org.labsystem.dao.iface.SourceDao;
+import org.labsystem.domain.dao.iface.SourceDao;
 import org.labsystem.entity.Source;
 import org.springframework.stereotype.Repository;
 

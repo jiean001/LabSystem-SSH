@@ -1,4 +1,4 @@
-package org.labsystem.dao.impl;
+package org.labsystem.domain.dao.impl;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.labsystem.dao.iface.GenericDao;
+import org.labsystem.domain.dao.iface.GenericDao;
 import org.springframework.stereotype.Repository;
 
 @Repository("GenericDao")

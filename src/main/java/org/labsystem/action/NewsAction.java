@@ -5,8 +5,8 @@ import java.util.List;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
-import org.labsystem.entity.News;
-import org.labsystem.service.NewsService;
+import org.labsystem.entity.News_;
+import org.labsystem.service._NewsService;
 import org.labsystem.util.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,11 +18,11 @@ public class NewsAction extends BaseAction {
 
 	private int rows = 5;
 
-	private News news;
-	private List<News> newsList;
+	private News_ news;
+	private List<News_> newsList;
 
 	@Autowired
-	private NewsService newsService;
+	private _NewsService newsService;
 
 	/**
 	 * 列表
@@ -94,19 +94,19 @@ public class NewsAction extends BaseAction {
 		return "relist";
 	}
 
-	public News getNews() {
+	public News_ getNews() {
 		return news;
 	}
 
-	public void setNews(News news) {
+	public void setNews(News_ news) {
 		this.news = news;
 	}
 
-	public List<News> getNewsList() {
+	public List<News_> getNewsList() {
 		return newsList;
 	}
 
-	public void setNewsList(List<News> newsList) {
+	public void setNewsList(List<News_> newsList) {
 		this.newsList = newsList;
 	}
 

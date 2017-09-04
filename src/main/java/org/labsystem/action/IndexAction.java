@@ -10,12 +10,12 @@ import org.apache.struts2.convention.annotation.Results;
 import org.labsystem.entity.Category;
 import org.labsystem.entity.Company;
 import org.labsystem.entity.Example;
-import org.labsystem.entity.News;
+import org.labsystem.entity.News_;
 import org.labsystem.entity.Product;
 import org.labsystem.service.CategoryService;
 import org.labsystem.service.CompanyService;
 import org.labsystem.service.ExampleService;
-import org.labsystem.service.NewsService;
+import org.labsystem.service._NewsService;
 import org.labsystem.service.ProductService;
 
 @Results({ @Result(name = "index", location = "/index/index.jsp"), @Result(name = "news", location = "/index/news.jsp"),
@@ -31,16 +31,16 @@ public class IndexAction extends BaseAction {
 
 	private int id;
 	private int type;
-	private News news;
+	private News_ news;
 	private Product product;
 	private Example example;
 	private Company company;
-	private List<News> newses;
+	private List<News_> newses;
 	private List<Product> products;
 	private List<Example> examples;
 	private List<Category> categories;
 	@Resource
-	private NewsService newsService;
+	private _NewsService newsService;
 	@Resource
 	private ProductService productService;
 	@Resource
@@ -188,11 +188,11 @@ public class IndexAction extends BaseAction {
 		return total % rows == 0 ? total / rows : total / rows + 1;
 	}
 
-	public News getNews() {
+	public News_ getNews() {
 		return news;
 	}
 
-	public void setNews(News news) {
+	public void setNews(News_ news) {
 		this.news = news;
 	}
 
@@ -212,11 +212,11 @@ public class IndexAction extends BaseAction {
 		this.example = example;
 	}
 
-	public List<News> getNewses() {
+	public List<News_> getNewses() {
 		return newses;
 	}
 
-	public void setNewses(List<News> newses) {
+	public void setNewses(List<News_> newses) {
 		this.newses = newses;
 	}
 

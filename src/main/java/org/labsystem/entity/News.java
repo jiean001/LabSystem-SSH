@@ -2,52 +2,89 @@ package org.labsystem.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity // hibernate模型 对应数据库中news
-@Table(name = "news") // 指定数据库中的表
-public class News {
+@Entity
+@Table(name = "newsnew")
+public class News implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1846434102514204020L;
 	@Id
-	@GeneratedValue // id生成策略 默认auto 相当于hibernate的native - 自增字段
-	private int id;
-	private String title;
-	private String intro;
-	private Date time;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "news_id")
+	private Integer newsId;
+	@Column(name = "newstitle_c")
+	private String newstitleC;
+	@Column(name = "newstitle_e")
+	private String newstitleE;
+	@Column(name = "newscontent_c")
+	private String newscontentC;
+	@Column(name = "newscontent_e")
+	private String newscontentE;
+	@Column(name = "newstime")
+	private Date newstime;
 
-	public int getId() {
-		return id;
+	public News() {
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public News(String newstitleC, String newstitleE, String newscontentC, String newscontentE, Date newstime) {
+		this.newstitleC = newstitleC;
+		this.newstitleE = newstitleE;
+		this.newscontentC = newscontentC;
+		this.newscontentE = newscontentE;
+		this.newstime = newstime;
 	}
 
-	public String getTitle() {
-		return title;
+	public Integer getNewsId() {
+		return this.newsId;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setNewsId(Integer newsId) {
+		this.newsId = newsId;
 	}
 
-	public String getIntro() {
-		return intro;
+	public String getNewstitleC() {
+		return this.newstitleC;
 	}
 
-	public void setIntro(String intro) {
-		this.intro = intro;
+	public void setNewstitleC(String newstitleC) {
+		this.newstitleC = newstitleC;
 	}
 
-	public Date getTime() {
-		return time;
+	public String getNewstitleE() {
+		return this.newstitleE;
 	}
 
-	public void setTime(Date time) {
-		this.time = time;
+	public void setNewstitleE(String newstitleE) {
+		this.newstitleE = newstitleE;
 	}
 
+	public String getNewscontentC() {
+		return this.newscontentC;
+	}
+
+	public void setNewscontentC(String newscontentC) {
+		this.newscontentC = newscontentC;
+	}
+
+	public String getNewscontentE() {
+		return this.newscontentE;
+	}
+
+	public void setNewscontentE(String newscontentE) {
+		this.newscontentE = newscontentE;
+	}
+
+	public Date getNewstime() {
+		return this.newstime;
+	}
+
+	public void setNewstime(Date newstime) {
+		this.newstime = newstime;
+	}
 }

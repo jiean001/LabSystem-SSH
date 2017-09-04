@@ -15,17 +15,17 @@ import org.labsystem.entity.Product;
 import org.labsystem.service.CategoryService;
 import org.labsystem.service.CompanyService;
 import org.labsystem.service.ExampleService;
-import org.labsystem.service._NewsService;
+import org.labsystem.service.NewsService_;
 import org.labsystem.service.ProductService;
 
 @Results({ @Result(name = "index", location = "/index/index.jsp"), @Result(name = "news", location = "/index/news.jsp"),
-		@Result(name = "product", location = "/index/product.jsp"),
-		@Result(name = "example", location = "/index/example.jsp"),
-		@Result(name = "scope", location = "/index/scope.jsp"), @Result(name = "gbook", location = "/index/gbook.jsp"),
-		@Result(name = "about", location = "/index/about.jsp"),
-		@Result(name = "newsmodel", location = "/index/news1.jsp"), // 新闻内容模版
-		@Result(name = "productmodel", location = "/index/product1.jsp"), // 产品内容模版
-		@Result(name = "examplemodel", location = "/index/example1.jsp") // 案例内容模版
+	@Result(name = "product", location = "/index/product.jsp"),
+	@Result(name = "example", location = "/index/example.jsp"),
+	@Result(name = "scope", location = "/index/scope.jsp"), @Result(name = "gbook", location = "/index/gbook.jsp"),
+	@Result(name = "about", location = "/index/about.jsp"),
+	@Result(name = "newsmodel", location = "/index/news1.jsp"), // 新闻内容模版
+	@Result(name = "productmodel", location = "/index/product1.jsp"), // 产品内容模版
+	@Result(name = "examplemodel", location = "/index/example1.jsp") // 案例内容模版
 })
 public class IndexAction extends BaseAction {
 
@@ -40,7 +40,7 @@ public class IndexAction extends BaseAction {
 	private List<Example> examples;
 	private List<Category> categories;
 	@Resource
-	private _NewsService newsService;
+	private NewsService_ newsService;
 	@Resource
 	private ProductService productService;
 	@Resource
@@ -52,7 +52,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 前台首页
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("index")
@@ -66,7 +66,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 新闻资讯
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("news")
@@ -79,7 +79,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 产品展示
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("product")
@@ -98,7 +98,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 成功案例
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("example")
@@ -117,7 +117,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 在线留言
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("gbook")
@@ -128,7 +128,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 关于我们
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("about")
@@ -139,7 +139,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 新闻内容模版
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("newsmodel")
@@ -151,7 +151,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 产品内容模版
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("productmodel")
@@ -164,7 +164,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 案例内容模版
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("examplemodel")
@@ -177,7 +177,7 @@ public class IndexAction extends BaseAction {
 
 	/**
 	 * 计算总页数
-	 * 
+	 *
 	 * @param total
 	 *            总记录数
 	 * @param rows

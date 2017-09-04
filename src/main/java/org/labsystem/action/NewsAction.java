@@ -6,14 +6,14 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
 import org.labsystem.entity.News_;
-import org.labsystem.service._NewsService;
+import org.labsystem.service.NewsService_;
 import org.labsystem.util.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Results({ @Result(name = "list", location = "/admin/news_list.jsp"),
-		@Result(name = "add", location = "/admin/news_add.jsp"),
-		@Result(name = "edit", location = "/admin/news_edit.jsp"),
-		@Result(name = "relist", type = "redirect", location = "newsList.action"), })
+	@Result(name = "add", location = "/admin/news_add.jsp"),
+	@Result(name = "edit", location = "/admin/news_edit.jsp"),
+	@Result(name = "relist", type = "redirect", location = "newsList.action"), })
 public class NewsAction extends BaseAction {
 
 	private int rows = 5;
@@ -22,11 +22,11 @@ public class NewsAction extends BaseAction {
 	private List<News_> newsList;
 
 	@Autowired
-	private _NewsService newsService;
+	private NewsService_ newsService;
 
 	/**
 	 * 列表
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("newsList")
@@ -38,7 +38,7 @@ public class NewsAction extends BaseAction {
 
 	/**
 	 * 编辑
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("newsAdd")
@@ -48,7 +48,7 @@ public class NewsAction extends BaseAction {
 
 	/**
 	 * 保存
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("newsSave")
@@ -59,7 +59,7 @@ public class NewsAction extends BaseAction {
 
 	/**
 	 * 编辑
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("newsEdit")
@@ -70,7 +70,7 @@ public class NewsAction extends BaseAction {
 
 	/**
 	 * 更新
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("newsUpdate")
@@ -85,7 +85,7 @@ public class NewsAction extends BaseAction {
 
 	/**
 	 * 删除
-	 * 
+	 *
 	 * @return
 	 */
 	@Action("newsDelete")

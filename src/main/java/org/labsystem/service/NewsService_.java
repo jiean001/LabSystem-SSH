@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service // spring管理对象
 @Transactional // 注册事务 为此类中所有方法添加事务
-public class _NewsService {
+public class NewsService_ {
 
 	@Resource
 	private NewsDao newsDao;

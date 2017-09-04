@@ -25,7 +25,7 @@ public class TestResearchService {
 	}
 
 	void testGetResearch() {
-		tmpResearch = researchService.getResearch(1);
+		tmpResearch = researchService.getResearch(3);
 		LOGGER.info("testGetResearch" + JSON.toJSONString(tmpResearch));
 	}
 

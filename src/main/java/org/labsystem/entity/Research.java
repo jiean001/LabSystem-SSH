@@ -30,7 +30,8 @@ public class Research implements java.io.Serializable {
 	public Research() {
 	}
 
-	public Research(String researchintropic, String researchnameC, String researchnameE, String researchintroC, String researchintroE) {
+	public Research(String researchintropic, String researchnameC, String researchnameE, String researchintroC,
+			String researchintroE) {
 		this.researchintropic = researchintropic;
 		this.researchnameC = researchnameC;
 		this.researchnameE = researchnameE;

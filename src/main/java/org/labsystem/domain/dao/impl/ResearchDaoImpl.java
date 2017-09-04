@@ -8,12 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository("ResearchDao")
 public class ResearchDaoImpl extends GenericDaoImpl<Research, Integer> implements ResearchDao {
-
-	@Override
-	public Research select(Research entity, Integer id) {
-		return super.select(entity, id);
-	}
-
 	@Override
 	public List<Research> findAll() {
 		// TODO cache

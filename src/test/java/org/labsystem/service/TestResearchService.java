@@ -1,17 +1,12 @@
 package org.labsystem.service;
 
 import org.apache.log4j.Logger;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.labsystem.domain.service.iface.ResearchService;
 import org.labsystem.entity.Research;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 
 import com.alibaba.fastjson.JSON;
 
-@RunWith(JUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:spring.xml", "struts.xml" })
 public class TestResearchService {
 	private static final Logger LOGGER = Logger.getLogger(TestResearchService.class);
 
@@ -20,7 +15,7 @@ public class TestResearchService {
 	Research tmpResearch;
 
 	void testAddResearch() {
-		Research research = new Research("机器视觉", "computer television", "这里是机器视觉", "this is the tv");
+		Research research = new Research("机器视觉", "","computer television", "这里是机器视觉", "this is the tv");
 		LOGGER.info("testAddProject: " + JSON.toJSONString(researchService.addResearch(research)));
 	}
 
@@ -42,7 +37,6 @@ public class TestResearchService {
 		LOGGER.info("testDeleteResearch: " + JSON.toJSONString(researchService.deleteResearch(tmpResearch)));
 	}
 
-	@Test
 	public void testMain() {
 		testAddResearch();
 		testGetResearch();

@@ -6,7 +6,7 @@ import org.labsystem.domain.dao.iface.ResproDao;
 import org.labsystem.entity.Respro;
 import org.springframework.stereotype.Repository;
 
-@Repository("ResproDaoImpl")
+@Repository("ResproDao")
 public class ResproDaoImpl extends GenericDaoImpl<Respro, Integer> implements ResproDao {
 	@Override
 	public List<Respro> findAll() {

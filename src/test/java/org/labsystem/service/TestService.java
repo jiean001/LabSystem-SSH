@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.labsystem.domain.service.iface.ResearchService;
+import org.labsystem.entity.Researchfield;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
@@ -18,8 +19,14 @@ public class TestService {
 	private ResearchService researchService;
 
 	void testResearchService() {
-		LOGGER.error("luxiongbo_testResearchService"
-				+ JSON.toJSONString(researchService.getAllResearchFieldView(false)));
+		LOGGER.error(
+				"luxiongbo_testResearchService1" + JSON.toJSONString(researchService.getAllResearchFieldView(false)));
+
+		Researchfield researchfield = researchService.getResearchfield(1);
+		LOGGER.error("luxiongbo_testResearchService2" + JSON.toJSONString(researchfield));
+
+		LOGGER.error("luxiongbo_testResearchService3"
+				+ JSON.toJSONString(researchService.getResearchDetailsViewByResearchField(researchfield, true)));
 	}
 
 	@Test

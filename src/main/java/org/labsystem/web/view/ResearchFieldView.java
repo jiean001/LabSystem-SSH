@@ -8,22 +8,22 @@ public class ResearchFieldView {
 	private Integer researchFieldId;
 	private String researchFieldName;
 
-	//根据领域获得该视图
+	// 根据领域获得该视图
 	public ResearchFieldView(Researchfield researchfield, boolean isChinese) {
 		this.researchFieldId = researchfield.getResearchfieldId();
-		if(isChinese) {
+		if (isChinese) {
 			this.researchFieldName = researchfield.getResearchfieldnameC();
 		} else {
 			this.researchFieldName = researchfield.getResearchfieldnameE();
 		}
 	}
 
-	//领域id
+	// 领域id
 	public Integer getResearchFieldId() {
 		return researchFieldId;
 	}
 
-	//领域名称
+	// 领域名称
 	public String getResearchFieldName() {
 		return researchFieldName;
 	}

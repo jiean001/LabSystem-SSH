@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository("EdubkgrdDao")
 public class EdubkgrdDaoImpl extends GenericDaoImpl<Edubkgrd, Integer> implements EdubkgrdDao {
-
 	@Override
 	public Edubkgrd select(Edubkgrd entity, Integer id) {
 		return super.select(entity, id);

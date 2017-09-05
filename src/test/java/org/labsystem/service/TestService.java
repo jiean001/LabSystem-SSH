@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.labsystem.domain.service.iface.LaboratoryInfoService;
 import org.labsystem.domain.service.iface.ResearchService;
+import org.labsystem.domain.service.iface.StudentService;
 import org.labsystem.entity.Researchfield;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -20,6 +21,8 @@ public class TestService {
 	private ResearchService researchService;
 	@Autowired
 	private LaboratoryInfoService laboratoryInfoService;
+	@Autowired
+	private StudentService studentService;
 
 	void testResearchService() {
 		LOGGER.error(
@@ -37,10 +40,18 @@ public class TestService {
 				+ JSON.toJSONString(laboratoryInfoService.getLaboratoryInfoView(true)));
 	}
 
+	void testStudentSerive() {
+		LOGGER.error("luxiongbo_testStudentSerive1" + JSON.toJSONString(studentService.getAllYears()));
+
+		LOGGER.error(
+				"luxiongbo_testStudentSerive2" + JSON.toJSONString(studentService.getStudentsByYear("2017", true)));
+	}
+
 	@Test
 	public void testMain() {
 		// testResearchService();
-		testLaboratoryInfoService();
+		// testLaboratoryInfoService();
+		testStudentSerive();
 	}
 
 }

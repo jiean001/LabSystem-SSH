@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-09-04 17:25:01
+Date: 2017-09-05 09:51:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,6 +27,12 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of admin
+-- ----------------------------
+INSERT INTO `admin` VALUES ('1', '1', '1');
+INSERT INTO `admin` VALUES ('2', '2', '2');
+
+-- ----------------------------
 -- Table structure for edubkgrd
 -- ----------------------------
 DROP TABLE IF EXISTS `edubkgrd`;
@@ -36,6 +42,15 @@ CREATE TABLE `edubkgrd` (
   `edubkgrdname_e` varchar(255) NOT NULL,
   PRIMARY KEY (`edubkgrd_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of edubkgrd
+-- ----------------------------
+INSERT INTO `edubkgrd` VALUES ('1', '博士', 'Doctor´s Degree');
+INSERT INTO `edubkgrd` VALUES ('2', '研究生', 'Master´s Degree');
+INSERT INTO `edubkgrd` VALUES ('3', '本科', 'Normal Courses');
+INSERT INTO `edubkgrd` VALUES ('4', '专科', 'Short-cycle Courses');
+INSERT INTO `edubkgrd` VALUES ('5', '其他', 'Others');
 
 -- ----------------------------
 -- Table structure for laboratoryinfo
@@ -59,6 +74,11 @@ CREATE TABLE `laboratoryinfo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of laboratoryinfo
+-- ----------------------------
+INSERT INTO `laboratoryinfo` VALUES ('1', '熊盛武', 'xiongshengwu', '朱安娜', 'xiongshegnwu 1', '这里是熊盛武实验室', 'this is the laboratory of xiongshengwu', '123456', '124655@qq.com', '武汉市', 'wuhan ', '4515230', 'sfasfsaf');
+
+-- ----------------------------
 -- Table structure for newsnew
 -- ----------------------------
 DROP TABLE IF EXISTS `newsnew`;
@@ -71,6 +91,11 @@ CREATE TABLE `newsnew` (
   `newstime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`news_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of newsnew
+-- ----------------------------
+INSERT INTO `newsnew` VALUES ('2', '新闻1', 'news1', '这是新闻1的内容', 'this is the content of newsa', '2017-09-04 12:26:00');
 
 -- ----------------------------
 -- Table structure for paper
@@ -90,6 +115,12 @@ CREATE TABLE `paper` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of paper
+-- ----------------------------
+INSERT INTO `paper` VALUES ('1', '1', '1', '1', '1', '1', '1', '1', '2017-09-02 01:00:21');
+INSERT INTO `paper` VALUES ('2', '论文1', 'paper1', '简介', 'biref introduction', 'http://www.baidu.com', '1', '1', '2017-09-02 01:27:31');
+
+-- ----------------------------
 -- Table structure for paperbelong
 -- ----------------------------
 DROP TABLE IF EXISTS `paperbelong`;
@@ -104,6 +135,10 @@ CREATE TABLE `paperbelong` (
   `paperbelonginfo_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`paperbelong_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of paperbelong
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for probelong
@@ -122,6 +157,10 @@ CREATE TABLE `probelong` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of probelong
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for professionaltitle
 -- ----------------------------
 DROP TABLE IF EXISTS `professionaltitle`;
@@ -131,6 +170,14 @@ CREATE TABLE `professionaltitle` (
   `profsntitlename_e` varchar(255) NOT NULL,
   PRIMARY KEY (`profsntitle_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of professionaltitle
+-- ----------------------------
+INSERT INTO `professionaltitle` VALUES ('1', '教授', 'professor');
+INSERT INTO `professionaltitle` VALUES ('2', '副教授', 'associate professor');
+INSERT INTO `professionaltitle` VALUES ('3', '讲师', 'lecturer');
+INSERT INTO `professionaltitle` VALUES ('4', '助教', 'assistant');
 
 -- ----------------------------
 -- Table structure for project
@@ -152,6 +199,12 @@ CREATE TABLE `project` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of project
+-- ----------------------------
+INSERT INTO `project` VALUES ('3', '项目1', 'project 1', '1', '这是项目1', 'this is project 1', '国家项目', 'guojiaxiagnmu', '2017-09-04 12:28:18', '2017-09-04 12:28:18', '100000');
+INSERT INTO `project` VALUES ('4', '项目1', 'project 1', '1', '这是项目1', 'this is project 1', '国家项目', 'guojiaxiagnmu', '2017-09-04 12:29:48', '2017-09-04 12:29:48', '100000');
+
+-- ----------------------------
 -- Table structure for resbelong
 -- ----------------------------
 DROP TABLE IF EXISTS `resbelong`;
@@ -166,17 +219,60 @@ CREATE TABLE `resbelong` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of resbelong
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for reschfldres
+-- ----------------------------
+DROP TABLE IF EXISTS `reschfldres`;
+CREATE TABLE `reschfldres` (
+  `reschfldres_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `researchfield_id` int(11) DEFAULT NULL,
+  `research_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`reschfldres_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of reschfldres
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for research
 -- ----------------------------
 DROP TABLE IF EXISTS `research`;
 CREATE TABLE `research` (
   `research_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `researchintropic` varchar(255) DEFAULT NULL,
   `researchname_c` varchar(255) NOT NULL,
   `researchname_e` varchar(255) DEFAULT NULL,
   `researchintro_c` varchar(255) DEFAULT NULL,
   `researchintro_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`research_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of research
+-- ----------------------------
+INSERT INTO `research` VALUES ('2', null, '机器视觉', 'computer television', '这里是机器视觉', 'this is the tv');
+
+-- ----------------------------
+-- Table structure for researchfield
+-- ----------------------------
+DROP TABLE IF EXISTS `researchfield`;
+CREATE TABLE `researchfield` (
+  `researchfield_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `researchfieldname_c` varchar(255) DEFAULT NULL,
+  `researchfieldname_e` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`researchfield_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of researchfield
+-- ----------------------------
+INSERT INTO `researchfield` VALUES ('1', '机器学习', 'machine learning');
+INSERT INTO `researchfield` VALUES ('2', '深度学习', 'deap learning');
+INSERT INTO `researchfield` VALUES ('3', '数据挖掘', 'data mining');
 
 -- ----------------------------
 -- Table structure for respaper
@@ -192,6 +288,10 @@ CREATE TABLE `respaper` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of respaper
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for respro
 -- ----------------------------
 DROP TABLE IF EXISTS `respro`;
@@ -203,6 +303,10 @@ CREATE TABLE `respro` (
   `resprointro_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`respro_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of respro
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for source
@@ -217,6 +321,27 @@ CREATE TABLE `source` (
   `sourcelevel` int(11) DEFAULT NULL,
   `sourcescore` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of source
+-- ----------------------------
+INSERT INTO `source` VALUES ('1', '期刊1', 'magazine 1', '这是期刊1 ', 'this is magazine 1', '1', '100');
+INSERT INTO `source` VALUES ('2', '期刊2', 'magazine 2', '这是期刊1 ', 'this is magazine 2', '2', '90');
+
+-- ----------------------------
+-- Table structure for state
+-- ----------------------------
+DROP TABLE IF EXISTS `state`;
+CREATE TABLE `state` (
+  `state_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `statename_c` varchar(255) DEFAULT NULL,
+  `statename_e` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`state_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of state
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for student
@@ -238,6 +363,10 @@ CREATE TABLE `student` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of student
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for stuyear
 -- ----------------------------
 DROP TABLE IF EXISTS `stuyear`;
@@ -251,6 +380,10 @@ CREATE TABLE `stuyear` (
 ) ENGINE=InnoDB AUTO_INCREMENT=111112 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of stuyear
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for supervisortype
 -- ----------------------------
 DROP TABLE IF EXISTS `supervisortype`;
@@ -260,6 +393,12 @@ CREATE TABLE `supervisortype` (
   `supervisortypename_e` varchar(255) NOT NULL,
   PRIMARY KEY (`supervisortype_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of supervisortype
+-- ----------------------------
+INSERT INTO `supervisortype` VALUES ('1', '博士生导师', 'doctoral supervisor');
+INSERT INTO `supervisortype` VALUES ('2', '硕士生导师', 'master superisor');
 
 -- ----------------------------
 -- Table structure for teacher
@@ -281,3 +420,7 @@ CREATE TABLE `teacher` (
   `teacherbriefintro_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`teacher_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of teacher
+-- ----------------------------

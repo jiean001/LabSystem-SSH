@@ -3,8 +3,8 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.ReschfldresDao;
-import org.labsystem.entity.Reschfldres;
-import org.labsystem.entity.Researchfield;
+import org.labsystem.domain.entity.Reschfldres;
+import org.labsystem.domain.entity.Researchfield;
 import org.springframework.stereotype.Repository;
 
 @Repository("ReschfldresDao")

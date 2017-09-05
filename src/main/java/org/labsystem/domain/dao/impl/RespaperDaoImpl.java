@@ -3,8 +3,8 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.RespaperDao;
-import org.labsystem.entity.Research;
-import org.labsystem.entity.Respaper;
+import org.labsystem.domain.entity.Research;
+import org.labsystem.domain.entity.Respaper;
 import org.springframework.stereotype.Repository;
 
 @Repository("RespaperDao")

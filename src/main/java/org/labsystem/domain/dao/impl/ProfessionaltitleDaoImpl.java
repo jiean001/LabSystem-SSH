@@ -3,7 +3,7 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.ProfessionaltitleDao;
-import org.labsystem.entity.Professionaltitle;
+import org.labsystem.domain.entity.Professionaltitle;
 import org.springframework.stereotype.Repository;
 
 @Repository("ProfessionaltitleDao")

@@ -2,7 +2,7 @@ package org.labsystem.domain.service.iface;
 
 import java.util.List;
 
-import org.labsystem.entity.Researchfield;
+import org.labsystem.domain.entity.Researchfield;
 import org.labsystem.web.view.ResearchDetailsView;
 import org.labsystem.web.view.ResearchFieldView;
 

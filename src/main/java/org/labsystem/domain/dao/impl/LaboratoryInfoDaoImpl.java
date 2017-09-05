@@ -1,7 +1,7 @@
 package org.labsystem.domain.dao.impl;
 
 import org.labsystem.domain.dao.iface.LaboratoryInfoDao;
-import org.labsystem.entity.LaboratoryInfo;
+import org.labsystem.domain.entity.LaboratoryInfo;
 import org.springframework.stereotype.Repository;
 
 @Repository("LaboratoryInfoDao")

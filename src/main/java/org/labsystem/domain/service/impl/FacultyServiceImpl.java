@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.labsystem.domain.dao.iface.ProfessionaltitleDao;
 import org.labsystem.domain.dao.iface.TeacherDao;
+import org.labsystem.domain.entity.Teacher;
 import org.labsystem.domain.service.iface.FacultyService;
-import org.labsystem.entity.Teacher;
 import org.labsystem.web.view.ProfessionalTitleView;
 import org.labsystem.web.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;

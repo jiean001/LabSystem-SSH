@@ -1,6 +1,6 @@
 package org.labsystem.web.view;
 
-import org.labsystem.entity.LaboratoryInfo;
+import org.labsystem.domain.entity.LaboratoryInfo;
 
 public class LaboratoryInfoView {
 	private int laboratoryId;

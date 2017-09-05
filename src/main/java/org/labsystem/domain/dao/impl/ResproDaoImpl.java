@@ -3,7 +3,7 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.ResproDao;
-import org.labsystem.entity.Respro;
+import org.labsystem.domain.entity.Respro;
 import org.springframework.stereotype.Repository;
 
 @Repository("ResproDao")

@@ -3,7 +3,7 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.StudentDao;
-import org.labsystem.entity.Student;
+import org.labsystem.domain.entity.Student;
 import org.springframework.stereotype.Repository;
 
 @Repository("StudentDao")

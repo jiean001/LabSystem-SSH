@@ -1,4 +1,4 @@
-package org.labsystem.action;
+package org.labsystem.web.action;
 
 import java.util.Map;
 

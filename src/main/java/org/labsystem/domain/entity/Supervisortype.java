@@ -1,4 +1,4 @@
-package org.labsystem.entity;
+package org.labsystem.domain.entity;
 // Generated 2017-9-4 1:16:30 by Hibernate Tools 5.2.5.Final
 
 import javax.persistence.Column;

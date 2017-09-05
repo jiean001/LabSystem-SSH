@@ -3,7 +3,7 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.PaperbelongDao;
-import org.labsystem.entity.Paperbelong;
+import org.labsystem.domain.entity.Paperbelong;
 import org.springframework.stereotype.Repository;
 
 @Repository("PaperbelongDao")

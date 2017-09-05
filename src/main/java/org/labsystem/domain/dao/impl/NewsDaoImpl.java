@@ -3,7 +3,7 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.NewsDao;
-import org.labsystem.entity.News;
+import org.labsystem.domain.entity.News;
 import org.springframework.stereotype.Repository;
 
 @Repository("NewsDao")

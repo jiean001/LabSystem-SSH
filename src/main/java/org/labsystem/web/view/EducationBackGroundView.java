@@ -1,6 +1,6 @@
 package org.labsystem.web.view;
 
-import org.labsystem.entity.Edubkgrd;
+import org.labsystem.domain.entity.Edubkgrd;
 
 public class EducationBackGroundView {
 	private int edubkgrdId;

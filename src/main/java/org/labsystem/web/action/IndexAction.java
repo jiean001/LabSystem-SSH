@@ -1,4 +1,4 @@
-package org.labsystem.action;
+package org.labsystem.web.action;
 
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;

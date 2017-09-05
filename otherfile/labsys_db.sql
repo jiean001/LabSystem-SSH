@@ -10,27 +10,10 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-09-05 09:51:04
+Date: 2017-09-06 02:34:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for admin
--- ----------------------------
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE `admin` (
-  `adminid` int(11) NOT NULL,
-  `username` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`adminid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of admin
--- ----------------------------
-INSERT INTO `admin` VALUES ('1', '1', '1');
-INSERT INTO `admin` VALUES ('2', '2', '2');
 
 -- ----------------------------
 -- Table structure for edubkgrd
@@ -79,10 +62,10 @@ CREATE TABLE `laboratoryinfo` (
 INSERT INTO `laboratoryinfo` VALUES ('1', '熊盛武', 'xiongshengwu', '朱安娜', 'xiongshegnwu 1', '这里是熊盛武实验室', 'this is the laboratory of xiongshengwu', '123456', '124655@qq.com', '武汉市', 'wuhan ', '4515230', 'sfasfsaf');
 
 -- ----------------------------
--- Table structure for newsnew
+-- Table structure for news
 -- ----------------------------
-DROP TABLE IF EXISTS `newsnew`;
-CREATE TABLE `newsnew` (
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE `news` (
   `news_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `newstitle_c` varchar(255) DEFAULT NULL,
   `newstitle_e` varchar(255) DEFAULT NULL,
@@ -90,12 +73,16 @@ CREATE TABLE `newsnew` (
   `newscontent_e` varchar(255) DEFAULT NULL,
   `newstime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`news_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of newsnew
+-- Records of news
 -- ----------------------------
-INSERT INTO `newsnew` VALUES ('2', '新闻1', 'news1', '这是新闻1的内容', 'this is the content of newsa', '2017-09-04 12:26:00');
+INSERT INTO `news` VALUES ('2', '新闻1', 'news1', '这是新闻1的内容', 'this is the content of newsa', '2017-09-04 12:26:00');
+INSERT INTO `news` VALUES ('3', '新闻2', 'news2', '这是新闻2的内容', 'hello hfkafa', '2017-09-06 00:39:48');
+INSERT INTO `news` VALUES ('4', '新闻3', 'news3', '这是新闻3的内容', 'adasfa fasfaf', '2017-09-22 00:39:50');
+INSERT INTO `news` VALUES ('5', '新闻4', 'news4', '这是新闻4的内容', 'afdsafdsafsafa', '2017-09-06 00:39:51');
+INSERT INTO `news` VALUES ('6', '新闻5', 'news5', '这是新闻5的内容', 'afdadsgdadg', '2017-09-06 00:39:54');
 
 -- ----------------------------
 -- Table structure for paper
@@ -112,13 +99,22 @@ CREATE TABLE `paper` (
   `papersource_id` int(11) DEFAULT NULL,
   `papertime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`paper_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of paper
 -- ----------------------------
-INSERT INTO `paper` VALUES ('1', '1', '1', '1', '1', '1', '1', '1', '2017-09-02 01:00:21');
-INSERT INTO `paper` VALUES ('2', '论文1', 'paper1', '简介', 'biref introduction', 'http://www.baidu.com', '1', '1', '2017-09-02 01:27:31');
+INSERT INTO `paper` VALUES ('1', '论文1', 'paper 1', '这是论文1', 'this is paper 1', 'www.baidu.com', '1', '1', '2017-09-05 12:19:40');
+INSERT INTO `paper` VALUES ('2', '论文2', 'paper 2', '这是论文2', 'this is paper 2', null, null, null, '2017-09-05 12:20:32');
+INSERT INTO `paper` VALUES ('3', '论文3', 'paper 3', null, null, null, null, null, '2017-09-05 12:22:12');
+INSERT INTO `paper` VALUES ('4', '论文4', 'paper 4', null, null, null, null, null, '2017-09-05 12:22:18');
+INSERT INTO `paper` VALUES ('5', '论文5', 'paper 5', null, null, null, null, null, '2017-09-05 12:22:20');
+INSERT INTO `paper` VALUES ('6', '论文6', 'paper 6', null, null, null, null, null, '2017-09-05 12:22:22');
+INSERT INTO `paper` VALUES ('7', '论文7', 'paper 7', null, null, null, null, null, '2017-09-05 12:22:25');
+INSERT INTO `paper` VALUES ('8', '论文8', 'paper 8', null, null, null, null, null, '2017-09-05 12:22:27');
+INSERT INTO `paper` VALUES ('9', '论文9', 'paper 9', null, null, null, null, null, '2017-09-05 12:22:29');
+INSERT INTO `paper` VALUES ('10', '论文10', 'paper 10', null, null, null, null, null, '2017-09-05 12:22:32');
+INSERT INTO `paper` VALUES ('11', '论文11', 'paper 11', null, null, null, null, null, '2017-09-05 12:22:35');
 
 -- ----------------------------
 -- Table structure for paperbelong
@@ -231,11 +227,14 @@ CREATE TABLE `reschfldres` (
   `researchfield_id` int(11) DEFAULT NULL,
   `research_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`reschfldres_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of reschfldres
 -- ----------------------------
+INSERT INTO `reschfldres` VALUES ('1', '1', '1');
+INSERT INTO `reschfldres` VALUES ('2', '1', '2');
+INSERT INTO `reschfldres` VALUES ('3', '1', '4');
 
 -- ----------------------------
 -- Table structure for research
@@ -254,7 +253,8 @@ CREATE TABLE `research` (
 -- ----------------------------
 -- Records of research
 -- ----------------------------
-INSERT INTO `research` VALUES ('2', null, '机器视觉', 'computer television', '这里是机器视觉', 'this is the tv');
+INSERT INTO `research` VALUES ('1', 'www.163.com', '机器视觉', 'computer television', '这里是机器视觉', 'this is the tv');
+INSERT INTO `research` VALUES ('2', 'www.ifeng.com', '人工智能', 'serewrawefaw', '这是人工智能', 'tjhalk');
 
 -- ----------------------------
 -- Table structure for researchfield
@@ -285,11 +285,16 @@ CREATE TABLE `respaper` (
   `respaperintro_c` varchar(255) DEFAULT NULL,
   `respaperintro_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`respaper_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of respaper
 -- ----------------------------
+INSERT INTO `respaper` VALUES ('1', '1', '1', '积分垃圾分类', 'sfsdfaasdfaasf');
+INSERT INTO `respaper` VALUES ('2', '1', '2', '理发师傅卡就是开发了', 'flafaafa\'f');
+INSERT INTO `respaper` VALUES ('3', '1', '4', '然而啊额绕绕绕', 'efefaearare');
+INSERT INTO `respaper` VALUES ('4', '2', '3', null, null);
+INSERT INTO `respaper` VALUES ('5', '1', '7', null, null);
 
 -- ----------------------------
 -- Table structure for respro
@@ -360,11 +365,31 @@ CREATE TABLE `student` (
   `stubriefintro_e` varchar(255) DEFAULT NULL,
   `edubkgrd_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`student_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of student
 -- ----------------------------
+INSERT INTO `student` VALUES ('1', '1', '路雄博', 'Luxiongbo', '2017-08-01 23:30:02', 'www.baidu.com', '133131', 'afsdaf', '啊范德萨发生', 'afasfafasfaf', '1');
+INSERT INTO `student` VALUES ('2', '2', '发顺丰', 'ggsgsa', null, null, null, null, null, null, '2');
+INSERT INTO `student` VALUES ('3', '2', '飞洒', 'hhl', null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('4', '3', '啊房贷首付', 'gsdgsg', null, null, null, null, null, null, '4');
+INSERT INTO `student` VALUES ('5', '3', '阿发是否', 'gsgs', null, null, null, null, null, null, '1');
+INSERT INTO `student` VALUES ('6', '4', '胜多负少', null, null, null, null, null, null, null, '1');
+INSERT INTO `student` VALUES ('7', '6', '这小子', null, null, null, null, null, null, null, '2');
+INSERT INTO `student` VALUES ('8', '76', '在v下', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('9', '567', '石帆胜丰', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('10', '55767', '发顺丰都是', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('11', '47', '个体', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('12', '474', '微软微软', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('13', '474', '我认为而', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('14', '47474', '维尔瓦', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('15', '47', '胜多负少', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('16', '474', '高考', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('17', '47', '快高考', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('18', '475', '快高考高考', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('19', '47', '高考过后看过', null, null, null, null, null, null, null, '3');
+INSERT INTO `student` VALUES ('20', '475', '看过看过', null, null, null, null, null, null, null, '2');
 
 -- ----------------------------
 -- Table structure for stuyear
@@ -377,11 +402,28 @@ CREATE TABLE `stuyear` (
   `stuyearintro_c` varchar(255) DEFAULT NULL,
   `stuyearintro_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`stuyear_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=111112 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=111130 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of stuyear
 -- ----------------------------
+INSERT INTO `stuyear` VALUES ('111113', '2013', '1', null, null);
+INSERT INTO `stuyear` VALUES ('111114', '2013', '2', null, null);
+INSERT INTO `stuyear` VALUES ('111115', '2014', '3', null, null);
+INSERT INTO `stuyear` VALUES ('111116', '2014', '4', null, null);
+INSERT INTO `stuyear` VALUES ('111117', '2015', '5', null, null);
+INSERT INTO `stuyear` VALUES ('111118', '2016', '6', null, null);
+INSERT INTO `stuyear` VALUES ('111119', '2016', '7', null, null);
+INSERT INTO `stuyear` VALUES ('111120', '2017', '1', null, null);
+INSERT INTO `stuyear` VALUES ('111121', '2017', '6', null, null);
+INSERT INTO `stuyear` VALUES ('111122', '2017', '8', null, null);
+INSERT INTO `stuyear` VALUES ('111123', '2017', '9', null, null);
+INSERT INTO `stuyear` VALUES ('111124', '2017', '10', null, null);
+INSERT INTO `stuyear` VALUES ('111125', '2016', '11', null, null);
+INSERT INTO `stuyear` VALUES ('111126', '2016', '12', null, null);
+INSERT INTO `stuyear` VALUES ('111127', '2016', '13', null, null);
+INSERT INTO `stuyear` VALUES ('111128', '2016', '14', null, null);
+INSERT INTO `stuyear` VALUES ('111129', '2016', '15', null, null);
 
 -- ----------------------------
 -- Table structure for supervisortype
@@ -419,8 +461,12 @@ CREATE TABLE `teacher` (
   `teacherbriefintro_c` varchar(255) DEFAULT NULL,
   `teacherbriefintro_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`teacher_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of teacher
 -- ----------------------------
+INSERT INTO `teacher` VALUES ('1', '熊盛武', 'xiongshengwu', '1', '2017-04-13 01:06:42', '1', '1', '1', 'www', '13131132', 'rwrwr', '我确认我确认日期认为日期让人', 'jlasflasjffa');
+INSERT INTO `teacher` VALUES ('2', '朱安娜', 'anna', '0', '2017-09-06 01:08:52', '1', '3', '2', 'qwqr', '1315165656', 'qrwerwqrw', '叫阿嘎是关机啦噶', 'asfsafsafsaggag');
+INSERT INTO `teacher` VALUES ('3', '高永晟', 'yongsheng gao', '1', '2017-09-06 01:09:10', '1', '1', '1', 'dgsag', '22312123', 'agdsagag', '啊哥仨个的撒嘎嘎', 'gagasgaetwetwat');
+INSERT INTO `teacher` VALUES ('4', '段鹏飞', 'pengfei duan', '1', '2017-09-06 01:10:20', '1', '2', '2', 'wtwqtwwqt', '43255315', '2525352', '噶咯阿哥嘎嘎嘎嘎嘎嘎嘎', '3qrawtawewagaa');

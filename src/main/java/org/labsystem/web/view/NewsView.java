@@ -2,7 +2,7 @@ package org.labsystem.web.view;
 
 import java.util.Date;
 
-import org.labsystem.entity.News;
+import org.labsystem.domain.entity.News;
 
 public class NewsView {
 	private Integer newsId;

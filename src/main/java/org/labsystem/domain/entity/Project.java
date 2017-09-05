@@ -1,4 +1,4 @@
-package org.labsystem.entity;
+package org.labsystem.domain.entity;
 // Generated 2017-9-4 11:56:04 by Hibernate Tools 5.2.5.Final
 
 import java.util.Date;

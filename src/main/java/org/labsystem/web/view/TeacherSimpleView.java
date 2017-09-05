@@ -1,6 +1,6 @@
 package org.labsystem.web.view;
 
-import org.labsystem.entity.Teacher;
+import org.labsystem.domain.entity.Teacher;
 
 public class TeacherSimpleView {
 	private Integer teacherId;

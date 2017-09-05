@@ -3,7 +3,7 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.ResbelongDao;
-import org.labsystem.entity.Resbelong;
+import org.labsystem.domain.entity.Resbelong;
 import org.springframework.stereotype.Repository;
 
 @Repository("ResbelongDao")

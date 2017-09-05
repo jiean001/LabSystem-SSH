@@ -1,6 +1,6 @@
 package org.labsystem.web.view;
 
-import org.labsystem.entity.Paper;
+import org.labsystem.domain.entity.Paper;
 
 public class PaperSimpleView {
 	private Integer paperId;

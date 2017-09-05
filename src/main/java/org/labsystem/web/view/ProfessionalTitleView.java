@@ -1,6 +1,6 @@
 package org.labsystem.web.view;
 
-import org.labsystem.entity.Professionaltitle;
+import org.labsystem.domain.entity.Professionaltitle;
 
 public class ProfessionalTitleView {
 	private int profsnTitleId;

@@ -3,7 +3,7 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.EdubkgrdDao;
-import org.labsystem.entity.Edubkgrd;
+import org.labsystem.domain.entity.Edubkgrd;
 import org.springframework.stereotype.Repository;
 
 @Repository("EdubkgrdDao")

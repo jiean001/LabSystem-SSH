@@ -2,7 +2,7 @@ package org.labsystem.domain.dao.impl;
 
 import java.util.List;
 
-import org.labsystem.entity.Supervisortype;
+import org.labsystem.domain.entity.Supervisortype;
 import org.springframework.stereotype.Repository;
 
 @Repository("SupervisortypeDao")

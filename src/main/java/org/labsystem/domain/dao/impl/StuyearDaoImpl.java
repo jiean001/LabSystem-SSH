@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.hibernate.SQLQuery;
 import org.labsystem.domain.dao.iface.StuyearDao;
-import org.labsystem.entity.Stuyear;
+import org.labsystem.domain.entity.Stuyear;
 import org.springframework.stereotype.Repository;
 
 @Repository("StuyearDao")

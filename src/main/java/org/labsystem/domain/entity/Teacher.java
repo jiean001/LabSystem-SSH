@@ -1,4 +1,4 @@
-package org.labsystem.entity;
+package org.labsystem.domain.entity;
 
 import java.util.Date;
 

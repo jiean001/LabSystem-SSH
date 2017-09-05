@@ -3,12 +3,12 @@ package org.labsystem.service;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.labsystem.domain.entity.Researchfield;
 import org.labsystem.domain.service.iface.FacultyService;
 import org.labsystem.domain.service.iface.LaboratoryInfoService;
 import org.labsystem.domain.service.iface.LatestNewsService;
 import org.labsystem.domain.service.iface.ResearchService;
 import org.labsystem.domain.service.iface.StudentService;
-import org.labsystem.entity.Researchfield;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
@@ -64,10 +64,10 @@ public class TestService {
 
 	@Test
 	public void testMain() {
-		// testResearchService();
-		// testLaboratoryInfoService();
-		// testStudentSerive();
-		// testLatestNewsService();
+		testResearchService();
+		testLaboratoryInfoService();
+		testStudentSerive();
+		testLatestNewsService();
 		testFacultyService();
 	}
 

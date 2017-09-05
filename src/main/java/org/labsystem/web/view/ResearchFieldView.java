@@ -1,6 +1,6 @@
 package org.labsystem.web.view;
 
-import org.labsystem.entity.Researchfield;
+import org.labsystem.domain.entity.Researchfield;
 
 //左边栏的视图
 public class ResearchFieldView {

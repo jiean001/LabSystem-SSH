@@ -2,7 +2,7 @@ package org.labsystem.web.view;
 
 import java.util.List;
 
-import org.labsystem.entity.Research;
+import org.labsystem.domain.entity.Research;
 
 public class ResearchDetailsView {
 	private Integer researchId;

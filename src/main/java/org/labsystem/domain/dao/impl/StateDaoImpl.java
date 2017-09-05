@@ -3,7 +3,7 @@ package org.labsystem.domain.dao.impl;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.StateDao;
-import org.labsystem.entity.State;
+import org.labsystem.domain.entity.State;
 import org.springframework.stereotype.Repository;
 
 @Repository("StateDao")

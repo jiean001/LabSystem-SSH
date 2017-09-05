@@ -3,6 +3,7 @@ package org.labsystem.service;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.labsystem.domain.service.iface.LaboratoryInfoService;
 import org.labsystem.domain.service.iface.ResearchService;
 import org.labsystem.entity.Researchfield;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,8 @@ public class TestService {
 
 	@Autowired
 	private ResearchService researchService;
+	@Autowired
+	private LaboratoryInfoService laboratoryInfoService;
 
 	void testResearchService() {
 		LOGGER.error(
@@ -29,9 +32,15 @@ public class TestService {
 				+ JSON.toJSONString(researchService.getResearchDetailsViewByResearchField(researchfield, true)));
 	}
 
+	void testLaboratoryInfoService() {
+		LOGGER.error("luxiongbo_testLaboratoryInfoService"
+				+ JSON.toJSONString(laboratoryInfoService.getLaboratoryInfoView(true)));
+	}
+
 	@Test
 	public void testMain() {
-		testResearchService();
+		// testResearchService();
+		testLaboratoryInfoService();
 	}
 
 }

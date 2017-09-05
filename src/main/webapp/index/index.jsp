@@ -10,7 +10,7 @@
 	<body>
     <div id="all">
 	<div id="left">
-	     <p id="leftbutton1">机器学习</p>
+	     <p id="leftbutton1"><a href="research.jsp">机器学习</a></p>
 	     <p id="leftbutton2">图像处理</p>
 	     <p id="leftbutton3">电脑视觉</p>
 	     <p id="leftbutton4">。。</p>
@@ -19,7 +19,8 @@
 	<div id=right> 
 	     <div>实验室</div>
 	     <hr />
-	     <div id="body">老师介绍</div> 
+	     <div id="body">老师介绍</div>
+	          <div></div> 
 	     <hr />
 	     <div id="body">最新消息</div>
 	     <hr />
@@ -27,7 +28,7 @@
 	     <hr />
 	</div>
 	<hr />
-	<div id="footer">联系我们</div>
-</div>
+	</div>
+	<div id="footer" style="float:center;">联系我们</div>
 	</body>
 </html>

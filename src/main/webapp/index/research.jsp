@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>研究介绍</title>
+<link type="text/css" rel="stylesheet" href="index/css/research.css"/>
 </head>
 <body>
 <div id="all" class="fontcolor">

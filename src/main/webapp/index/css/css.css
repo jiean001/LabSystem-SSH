@@ -1,8 +1,10 @@
 #all
 {
-	height:1240px;
+	height:1500px;
 	width:1500px;
 	background-color:#929b88;
+	color:#7c7c7c;
+	font-family:ËÎÌו;
 }
 #left
 {
@@ -23,7 +25,8 @@
 #footer
 {
 	height:20px;
-	width:1500px;
+	width:1400px;
+	background-color:#929b88;
 }
 
 #body

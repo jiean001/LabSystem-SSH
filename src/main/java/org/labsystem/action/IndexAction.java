@@ -18,14 +18,14 @@ import org.labsystem.service.ExampleService;
 import org.labsystem.service.NewsService_;
 import org.labsystem.service.ProductService;
 
-@Results({ @Result(name = "index", location = "/index/index.jsp"), @Result(name = "news", location = "/index/news.jsp"),
-		@Result(name = "product", location = "/index/product.jsp"),
-		@Result(name = "example", location = "/index/example.jsp"),
-		@Result(name = "scope", location = "/index/scope.jsp"), @Result(name = "gbook", location = "/index/gbook.jsp"),
-		@Result(name = "about", location = "/index/about.jsp"),
-		@Result(name = "newsmodel", location = "/index/news1.jsp"), // 新闻内容模版
-		@Result(name = "productmodel", location = "/index/product1.jsp"), // 产品内容模版
-		@Result(name = "examplemodel", location = "/index/example1.jsp") // 案例内容模版
+@Results({ @Result(name = "index", location = "/index.jsp"), @Result(name = "news", location = "/index/news.jsp"),
+	@Result(name = "product", location = "/index/product.jsp"),
+	@Result(name = "example", location = "/index/example.jsp"),
+	@Result(name = "scope", location = "/index/scope.jsp"), @Result(name = "gbook", location = "/index/gbook.jsp"),
+	@Result(name = "about", location = "/index/about.jsp"),
+	@Result(name = "newsmodel", location = "/index/news1.jsp"), // 新闻内容模版
+	@Result(name = "productmodel", location = "/index/product1.jsp"), // 产品内容模版
+	@Result(name = "examplemodel", location = "/index/example1.jsp") // 案例内容模版
 })
 public class IndexAction extends BaseAction {
 

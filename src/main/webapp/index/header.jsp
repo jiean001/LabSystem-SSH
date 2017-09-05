@@ -49,7 +49,7 @@
 				<li><a href="example.action">成功案例</a></li>
 				<li><a href="gbook.action">在线留言</a></li>
 				<li><a href="about.action">关于我们</a></li>
-				<li style="float: right;"><a href="admin.action" target="_blank">后台管理</a></li>
+				<li style="float: right;"><a href="www.baidu.com" target="_blank">后台管理</a></li>
 			</ul>
 		</div>
 		

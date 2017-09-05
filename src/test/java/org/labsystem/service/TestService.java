@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.labsystem.domain.service.iface.LaboratoryInfoService;
+import org.labsystem.domain.service.iface.LatestNewsService;
 import org.labsystem.domain.service.iface.ResearchService;
 import org.labsystem.domain.service.iface.StudentService;
 import org.labsystem.entity.Researchfield;
@@ -23,6 +24,8 @@ public class TestService {
 	private LaboratoryInfoService laboratoryInfoService;
 	@Autowired
 	private StudentService studentService;
+	@Autowired
+	private LatestNewsService latestNewsService;
 
 	void testResearchService() {
 		LOGGER.error(
@@ -47,11 +50,17 @@ public class TestService {
 				"luxiongbo_testStudentSerive2" + JSON.toJSONString(studentService.getStudentsByYear("2017", true)));
 	}
 
+	void testLatestNewsService() {
+		LOGGER.error("luxiongbo_testLatestNewsService"
+				+ JSON.toJSONString(latestNewsService.getAllNewsViewsByTimeDesc(true)));
+	}
+
 	@Test
 	public void testMain() {
 		// testResearchService();
 		// testLaboratoryInfoService();
-		testStudentSerive();
+		// testStudentSerive();
+		testLatestNewsService();
 	}
 
 }

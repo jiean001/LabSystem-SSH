@@ -33,7 +33,7 @@ public class NewsDaoImpl extends GenericDaoImpl<News, Integer> implements NewsDa
 	public List<News> findAll() {
 		// TODO cache
 		@SuppressWarnings("unchecked")
-		List<News> newlist = this.getSession().createQuery("from News").list();
+		List<News> newlist = this.getSession().createQuery("from News news ORDER BY news.newstime desc").list();
 		return newlist;
 	}
 

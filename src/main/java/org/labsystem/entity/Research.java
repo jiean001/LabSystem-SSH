@@ -39,6 +39,14 @@ public class Research implements java.io.Serializable {
 		this.researchintroE = researchintroE;
 	}
 
+	public String getResearchintropic() {
+		return this.researchintropic;
+	}
+
+	public void setreSearchintropic(String researchintropic) {
+		this.researchintropic = researchintropic;
+	}
+
 	public Integer getResearchId() {
 		return this.researchId;
 	}

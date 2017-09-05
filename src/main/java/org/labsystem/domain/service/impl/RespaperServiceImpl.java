@@ -1,7 +1,11 @@
 package org.labsystem.domain.service.impl;
 
+import java.util.List;
+
 import org.labsystem.domain.dao.iface.RespaperDao;
 import org.labsystem.domain.service.iface.RespaperService;
+import org.labsystem.domain.view.PaperSimpleView;
+import org.labsystem.entity.Research;
 import org.labsystem.entity.Respaper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +35,11 @@ public class RespaperServiceImpl implements RespaperService {
 	@Override
 	public Respaper getRespaper(int id) {
 		return respaperDao.get(id);
+	}
+
+	@Override
+	public List<PaperSimpleView> getPaperSimpleByResearch(Research research, boolean isChinese) {
+		return respaperDao.getPaperSimpleByResearch(research, isChinese);
 	}
 
 }

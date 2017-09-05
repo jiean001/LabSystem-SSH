@@ -1,5 +1,9 @@
 package org.labsystem.domain.service.iface;
 
+import java.util.List;
+
+import org.labsystem.domain.view.PaperSimpleView;
+import org.labsystem.entity.Research;
 import org.labsystem.entity.Respaper;
 
 public interface RespaperService {
@@ -10,5 +14,7 @@ public interface RespaperService {
 	boolean deleteRespaper(Respaper entity);
 
 	Respaper getRespaper(int id);
+
+	List<PaperSimpleView> getPaperSimpleByResearch(Research research, boolean isChinese);
 
 }

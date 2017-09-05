@@ -17,8 +17,8 @@ public class PaperDaoImpl extends GenericDaoImpl<Paper, Integer> implements Pape
 	}
 
 	@Override
-	public Integer insert(Paper entity) {
-		return (Integer) getSession().save(entity);
+	public Paper getPaper(int id) {
+		return this.getSession().get(Paper.class, id);
 	}
 
 }

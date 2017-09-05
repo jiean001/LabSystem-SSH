@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.labsystem.domain.dao.iface.ReschfldresDao;
 import org.labsystem.domain.dao.iface.ResearchDao;
-import org.labsystem.domain.view.ResearchDetailsView;
 import org.labsystem.entity.Reschfldres;
 import org.labsystem.entity.Research;
 import org.labsystem.entity.Researchfield;
@@ -45,18 +44,4 @@ public class ReschfldresDaoImpl extends GenericDaoImpl<Reschfldres, Integer> imp
 		}
 		return Researchs;
 	}
-
-	@Override
-	public List<ResearchDetailsView> getResearchDetailsViewByResearchfield(Researchfield entity, boolean isChinese) {
-		//获得子领域
-		List<Research> Researchs = this.getResearchsByReschfld(entity);
-		List<ResearchDetailsView> detailsViews = new ArrayList<>();
-		//遍历子领域以便产生领域的详细视图
-		for(Research res: Researchs) {
-			ResearchDetailsView tmpView = new ResearchDetailsView(res, isChinese);
-			detailsViews.add(tmpView);
-		}
-		return detailsViews;
-	}
-
 }

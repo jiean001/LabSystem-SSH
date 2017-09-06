@@ -9,6 +9,7 @@ import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 import org.apache.struts2.interceptor.SessionAware;
+import org.labsystem.util.Config;
 
 /**
  * action基类继承自ActionSupport类 实现一些接口持有一些实用对象 向子类提供分页参数
@@ -101,4 +102,12 @@ public class BaseAction implements SessionAware, RequestAware, ServletRequestAwa
 		this.pageTool = pageTool;
 	}
 
+	public boolean getLanguage() {
+		return (this.getSession().get(Config.LANGUAGE) == null || this.getSession().get(Config.LANGUAGE) == "")  ?
+				Config.DEFAULTLANGUAGE : (boolean) this.getSession().get(Config.LANGUAGE);
+	}
+
+	public void setLanguage(boolean isChinese) {
+		this.getSession().put(Config.LANGUAGE, isChinese);
+	}
 }

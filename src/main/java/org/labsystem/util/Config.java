@@ -4,6 +4,6 @@ public class Config {
 	public static final String LANGUAGE = "Lauguage";
 	// true: Chinese
 	// false: English
-	public static final boolean DEFAULTLANGUAGE = true;
+	public static final boolean DEFAULTLANGUAGE = false;
 
 }

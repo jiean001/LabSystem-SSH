@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.labsystem.domain.entity.Research;
 
+//研究方向的视图
+//介绍图片,名称,介绍,论文列表
 public class ResearchDetailsView {
 	private Integer researchId;
 	private String researchIntroPic;

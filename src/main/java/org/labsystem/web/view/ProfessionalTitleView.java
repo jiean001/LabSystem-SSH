@@ -2,6 +2,8 @@ package org.labsystem.web.view;
 
 import org.labsystem.domain.entity.Professionaltitle;
 
+//职称视图
+//id和名称
 public class ProfessionalTitleView {
 	private int profsnTitleId;
 	private String profsnTitleName;

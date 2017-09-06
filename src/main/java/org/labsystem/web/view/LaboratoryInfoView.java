@@ -2,6 +2,8 @@ package org.labsystem.web.view;
 
 import org.labsystem.domain.entity.LaboratoryInfo;
 
+//实验室信息视图
+//需要显示的信息有实验室的名称，标题，介绍，电话，邮箱，地址等
 public class LaboratoryInfoView {
 	private int laboratoryId;
 	private String laboratoryName;

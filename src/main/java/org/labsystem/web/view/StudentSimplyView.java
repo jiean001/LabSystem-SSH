@@ -2,6 +2,8 @@ package org.labsystem.web.view;
 
 import org.labsystem.domain.entity.Student;
 
+//学生信息视图
+//id 名字 图片 学历
 public class StudentSimplyView {
 	private Integer studentId;
 	private String studentname;

@@ -2,6 +2,8 @@ package org.labsystem.web.view;
 
 import org.labsystem.domain.entity.Teacher;
 
+//老师简表
+//id， 姓名， 学历
 public class TeacherSimpleView {
 	private Integer teacherId;
 	private String teacherName;

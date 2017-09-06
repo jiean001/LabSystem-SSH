@@ -3,6 +3,7 @@ package org.labsystem.web.view;
 import org.labsystem.domain.entity.Researchfield;
 
 //左边栏的视图
+//id, 领域名称
 public class ResearchFieldView {
 
 	private Integer researchFieldId;

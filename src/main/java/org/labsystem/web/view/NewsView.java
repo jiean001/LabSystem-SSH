@@ -4,6 +4,8 @@ import java.util.Date;
 
 import org.labsystem.domain.entity.News;
 
+//新闻视图
+//id，标题，内容，时间
 public class NewsView {
 	private Integer newsId;
 	private String newsTitle;

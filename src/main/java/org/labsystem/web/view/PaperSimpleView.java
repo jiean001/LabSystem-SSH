@@ -2,6 +2,9 @@ package org.labsystem.web.view;
 
 import org.labsystem.domain.entity.Paper;
 
+//论文视图
+//论文名称，链接
+//注意：这个链接可以是下载好的在服务器的pdf文件也可以是发表到的会议的链接
 public class PaperSimpleView {
 	private Integer paperId;
 	private String paperName;

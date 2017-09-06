@@ -1,0 +1,46 @@
+@charset "UTF-8";
+#all
+{
+	width:1300px;
+	height:1240px;
+}
+
+#box1
+{
+	width:1300px;
+	height:40px;
+}
+
+#box2
+{
+	width:1300px;
+	height:400px;
+}
+
+.fontcolor
+{
+	color:#3d4247;
+}
+#left
+{
+	height:400px;
+	width:300px;
+}
+
+#right
+{
+	height:400px;
+	width:1000px;
+}
+
+#researchbox
+{
+	height:200px;
+	width:1000px;
+}
+
+#artbox
+{
+	height:200px;
+	width:1000px;
+}

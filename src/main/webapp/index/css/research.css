@@ -1,20 +1,19 @@
 @charset "UTF-8";
 #all
 {
-	width:1300px;
-	height:1240px;
+	width:800px;
+	height:640px;
+	background-color:#f9f9f9;
+	margin:0 auto;
+	color:#7c7c7c;
+	font-family:宋体;
 }
 
-#box1
-{
-	width:1300px;
-	height:40px;
-}
 
 #box2
 {
-	width:1300px;
-	height:400px;
+	width:800px;
+	height:200px;
 }
 
 .fontcolor
@@ -23,15 +22,21 @@
 }
 #left
 {
-	height:400px;
-	width:300px;
-}
+	width:200px;
+	height:150px;
+	float:left;
+	text-align:center; 
+	padding-top:50px;
+	}
 
 #right
 {
-	height:400px;
-	width:1000px;
+	width:500px;
+	height:200px;
+	margin-left:50px;
+	float:left;
 }
+
 
 #researchbox
 {

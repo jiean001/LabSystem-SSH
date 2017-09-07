@@ -8,6 +8,7 @@ import org.labsystem.domain.dao.iface.TeacherDao;
 import org.labsystem.domain.entity.Teacher;
 import org.labsystem.domain.service.iface.FacultyService;
 import org.labsystem.web.view.ProfessionalTitleView;
+import org.labsystem.web.view.ProjectSimpleView;
 import org.labsystem.web.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,20 @@ public class FacultyServiceImpl implements FacultyService {
 			teacherSimpleViews.add(tmpTeacherSimpleView);
 		}
 		return teacherSimpleViews;
+	}
+
+	@Override
+	public TeacherSimpleView getTeacherSimpleViewByTeacherID(int teacherID, boolean isChinese) {
+		Teacher teacher = teacherDao.get(teacherID);
+		ProfessionalTitleView pv = new ProfessionalTitleView(professionaltitleDao.get(teacher.getProfsntitleId()),
+				isChinese);
+		return new TeacherSimpleView(teacher, pv, isChinese);
+	}
+
+	@Override
+	public List<ProjectSimpleView> getProjectViewsByTeacherID(int teacherID, boolean isChinese) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

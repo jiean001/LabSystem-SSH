@@ -21,4 +21,10 @@ public class ProbelongDaoImpl extends GenericDaoImpl<Probelong, Integer> impleme
 		return this.getSession().get(Probelong.class, id);
 	}
 
+	@Override
+	public List<Probelong> getProbelongsByTeacher(int teacherID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

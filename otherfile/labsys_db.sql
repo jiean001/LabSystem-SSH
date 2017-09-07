@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : mdatabase
+Source Server         : asfasfa
 Source Server Version : 50717
 Source Host           : localhost:3306
 Source Database       : labsys_db
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-09-07 16:09:22
+Date: 2017-09-07 18:18:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -130,11 +130,14 @@ CREATE TABLE `paperbelong` (
   `paperbelongintro_c` varchar(255) DEFAULT NULL,
   `paperbelonginfo_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`paperbelong_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of paperbelong
 -- ----------------------------
+INSERT INTO `paperbelong` VALUES ('1', '1', '0', '1', '一', 'first', null, null);
+INSERT INTO `paperbelong` VALUES ('2', '2', '0', '1', '二', 'second', null, null);
+INSERT INTO `paperbelong` VALUES ('3', '8', '0', '1', '三', 'third', null, null);
 
 -- ----------------------------
 -- Table structure for probelong

@@ -21,10 +21,13 @@ public class ProbelongDaoImpl extends GenericDaoImpl<Probelong, Integer> impleme
 		return this.getSession().get(Probelong.class, id);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Probelong> getProbelongsByTeacher(int teacherID) {
-		// TODO Auto-generated method stub
-		return null;
+		String hql = "from Probelong probelong where probelong.probelongisstu = false and probelong.personId = "
+				+ teacherID;
+		List<Probelong> rtProbelongs = this.getSession().createQuery(hql).list();
+		return rtProbelongs;
 	}
 
 }

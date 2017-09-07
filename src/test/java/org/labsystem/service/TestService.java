@@ -60,6 +60,12 @@ public class TestService {
 
 	void testFacultyService() {
 		LOGGER.error("luxiongbo_testFacultyService1" + JSON.toJSONString(facultyService.getAllTeacherSimpeView(true)));
+
+		LOGGER.error("luxiongbo_testFacultyService_getTeacherSimpleViewByTeacherID"
+				+ JSON.toJSONString(facultyService.getTeacherSimpleViewByTeacherID(1, true)));
+
+		LOGGER.error("luxiongbo_testFacultyService_getProjectViewsByTeacherID"
+				+ JSON.toJSONString(facultyService.getProjectViewsByTeacherID(1, true)));
 	}
 
 	@Test

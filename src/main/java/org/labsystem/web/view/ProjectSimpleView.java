@@ -13,7 +13,7 @@ public class ProjectSimpleView {
 	private String proEndTime;
 	private Integer profund;
 
-	//用来展示的信息
+	// 用来展示的信息
 	private String showMsg;
 
 	public ProjectSimpleView(Project project, StateView stateView, boolean isChinese) {
@@ -22,7 +22,7 @@ public class ProjectSimpleView {
 		this.proStartTime = Feature.date2String(project.getProstarttime());
 		this.proEndTime = Feature.date2String(project.getProendtime());
 		this.profund = project.getProfund();
-		if(isChinese) {
+		if (isChinese) {
 			this.proName = project.getPronameC();
 			this.proIntro = project.getProintroC();
 			this.proSource = project.getProsourceC();
@@ -32,8 +32,8 @@ public class ProjectSimpleView {
 			this.proSource = project.getProsourceE();
 		}
 
-		this.showMsg = this.proSource + "," +  this.proName + "," + this.proIntro +
-				this.proStartTime + "-" + this.proEndTime + "," + this.proState + "," + this.profund + ".";
+		this.showMsg = this.proSource + "," + this.proName + "," + this.proIntro + this.proStartTime + "-"
+				+ this.proEndTime + "," + this.proState + "," + this.profund + ".";
 
 	}
 

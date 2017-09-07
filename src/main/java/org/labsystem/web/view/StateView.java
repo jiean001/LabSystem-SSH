@@ -8,7 +8,7 @@ public class StateView {
 
 	public StateView(State state, boolean isChinese) {
 		this.stateId = state.getStateId();
-		if(isChinese) {
+		if (isChinese) {
 			this.stateName = state.getStatenameC();
 		} else {
 			this.stateName = state.getStatenameE();

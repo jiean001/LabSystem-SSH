@@ -15,9 +15,7 @@ import org.labsystem.web.view.ResearchFieldView;
 import org.labsystem.web.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;
 
-
-@Results({ @Result(name = "index", location = "/index/index.jsp"),
-})
+@Results({ @Result(name = "index", location = "/index/index.jsp"), })
 public class IndexAction extends BaseAction {
 	@Autowired
 	private ResearchService researchService;
@@ -27,7 +25,6 @@ public class IndexAction extends BaseAction {
 	private FacultyService facultyService;
 	@Autowired
 	private LatestNewsService latestNewsService;
-
 
 	private List<ResearchFieldView> researchFieldViews;
 	private LaboratoryInfoView labInfoView;

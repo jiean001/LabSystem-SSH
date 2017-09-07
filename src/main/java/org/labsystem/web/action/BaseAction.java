@@ -103,8 +103,9 @@ public class BaseAction implements SessionAware, RequestAware, ServletRequestAwa
 	}
 
 	public boolean getLanguage() {
-		return (this.getSession().get(Config.LANGUAGE) == null || this.getSession().get(Config.LANGUAGE) == "")  ?
-				Config.DEFAULTLANGUAGE : (boolean) this.getSession().get(Config.LANGUAGE);
+		return (this.getSession().get(Config.LANGUAGE) == null || this.getSession().get(Config.LANGUAGE) == "")
+				? Config.DEFAULTLANGUAGE
+				: (boolean) this.getSession().get(Config.LANGUAGE);
 	}
 
 	public void setLanguage(boolean isChinese) {

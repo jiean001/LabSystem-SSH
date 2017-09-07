@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-09-06 02:34:08
+Date: 2017-09-07 16:09:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -150,11 +150,14 @@ CREATE TABLE `probelong` (
   `probelongintro_c` varchar(255) DEFAULT NULL,
   `probelongintro_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`probelong_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of probelong
 -- ----------------------------
+INSERT INTO `probelong` VALUES ('1', '1', '0', '1', '主持', 'zhuchi', '浪费撒娇浪费马上离开房间啦是免费空间撒旦', 'asdfasfsffjsadjf');
+INSERT INTO `probelong` VALUES ('2', '2', '0', '1', '参与', 'asdfasf', '拉风了拉萨大家发大师傅', 'msalfmanflkdfj\'ag');
+INSERT INTO `probelong` VALUES ('3', '3', '1', '1', '哈哈', 'asgasgaetaat', '开发贷款啦都没发卡号发', 'lkfdjlfakslhfalf');
 
 -- ----------------------------
 -- Table structure for professionaltitle
@@ -197,8 +200,9 @@ CREATE TABLE `project` (
 -- ----------------------------
 -- Records of project
 -- ----------------------------
-INSERT INTO `project` VALUES ('3', '项目1', 'project 1', '1', '这是项目1', 'this is project 1', '国家项目', 'guojiaxiagnmu', '2017-09-04 12:28:18', '2017-09-04 12:28:18', '100000');
-INSERT INTO `project` VALUES ('4', '项目1', 'project 1', '1', '这是项目1', 'this is project 1', '国家项目', 'guojiaxiagnmu', '2017-09-04 12:29:48', '2017-09-04 12:29:48', '100000');
+INSERT INTO `project` VALUES ('1', '项目1', 'project 1', '1', '这是项目1', 'this is project 1', '国家项目', 'guojiaxiagnmu', '2017-09-07 15:48:18', '2017-09-07 15:48:18', '100000');
+INSERT INTO `project` VALUES ('2', '项目2', 'project 2', '1', '这是项目2', 'this is project 1', '省级项目', 'guojiaxiagnmu', '2017-09-07 15:49:16', '2017-09-07 15:49:16', '100000');
+INSERT INTO `project` VALUES ('3', '项目3', 'project 3', '1', '这是项目3', 'gkljsd', '企业项目', 'klajfsankfasklfjl', '2017-09-07 15:49:34', '2017-09-07 15:49:34', '100');
 
 -- ----------------------------
 -- Table structure for resbelong
@@ -342,11 +346,12 @@ CREATE TABLE `state` (
   `statename_c` varchar(255) DEFAULT NULL,
   `statename_e` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`state_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of state
 -- ----------------------------
+INSERT INTO `state` VALUES ('1', '在研', 'online');
 
 -- ----------------------------
 -- Table structure for student

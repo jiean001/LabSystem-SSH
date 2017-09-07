@@ -15,7 +15,8 @@ import org.labsystem.web.view.ResearchFieldView;
 import org.labsystem.web.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Results({ @Result(name = "index", location = "/index/index.jsp"), })
+@Results({ @Result(name = "index", location = "/index/index.jsp"),
+	@Result(name = "people", location = "/index/people.jsp"), })
 public class IndexAction extends BaseAction {
 	@Autowired
 	private ResearchService researchService;
@@ -39,6 +40,16 @@ public class IndexAction extends BaseAction {
 		this.teacherSimpleViews = facultyService.getAllTeacherSimpeView(getLanguage());
 		this.newsViews = latestNewsService.getAllNewsViewsByTimeDesc(getLanguage());
 		return "index";
+	}
+
+	@Action("people")
+	public String people() {
+		setLanguage(!getLanguage());
+		this.labInfoView = laboratoryInfoService.getLaboratoryInfoView(getLanguage());
+		this.researchFieldViews = researchService.getAllResearchFieldView(getLanguage());
+		this.teacherSimpleViews = facultyService.getAllTeacherSimpeView(getLanguage());
+		this.newsViews = latestNewsService.getAllNewsViewsByTimeDesc(getLanguage());
+		return "people";
 	}
 
 	public List<NewsView> getNewsViews() {

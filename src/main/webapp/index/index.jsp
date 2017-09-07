@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>${labInfoView.laboratoryName}- 首页</title>
+<title>${labInfoView.laboratoryName}-首页</title>
 <link type="text/css" rel="stylesheet" href="index/css/css.css" />
 
 </head>
@@ -22,17 +22,18 @@
 		</div>
 		<div id=right>
 			<div>${labInfoView.laboratoryTitle}</div>
-			<hr />
-			<div id="body">老师介绍</div>
-			<div>
-				<s:iterator value="teacherSimpleViews" status="li">
-					<div id="leftbutton1">
-						<s:property value="teacherName" />
-						<s:property value="profsnTitle" />
-					</div>
-					<p></p>
-				</s:iterator>
-			</div>
+            <hr />
+            <div id="body">老师介绍
+                <div><a href="people.action">
+                   <s:iterator value="teacherSimpleViews" status="li">
+                     <div>
+                        <s:property value="teacherName" />
+                        <s:property value="profsnTitle" />
+                     </div></a>
+                   </s:iterator>
+            </div>
+            </div>
+            <hr />
 			<hr />
 			<div id="body">最新消息</div>
 			<div>

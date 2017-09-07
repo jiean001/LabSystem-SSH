@@ -1,0 +1,23 @@
+@charset "UTF-8";
+#all
+{
+	width:800px;
+	height:1300px;
+	background-color:#f9f9f9;
+	margin:0 auto;
+	color:#7c7c7c;
+	font-family:宋体;
+}
+
+#top
+{
+	height:300px;
+	width:800px;
+	
+}
+
+#foot
+{
+	height:1000px;
+	width:800px;
+}

@@ -11,6 +11,8 @@ import org.labsystem.web.view.ProjectSimpleView;
 import org.labsystem.web.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.opensymphony.xwork2.ActionContext;
+
 @Results({@Result(name = "people", location = "/index/people.jsp"), })
 public class TeacherAction extends BaseAction {
 	@Autowired
@@ -23,10 +25,19 @@ public class TeacherAction extends BaseAction {
 	//论文信息
 	private List<PaperSimpleView> paperSimpleViews;
 	
+	private int teacherID; 
+	
+	public int getTeacherID() {
+		return teacherID;
+	}
+
+	public void setTeacherID(int teacherID) {
+		this.teacherID = teacherID;
+	}
+
 	@Action("people")
 	public String people() {
-		setLanguage(!getLanguage());
-		int teacherID = 1;
+		setLanguage(!getLanguage());		
 		this.teacherView = facultyService.getTeacherSimpleViewByTeacherID(teacherID, getLanguage());
 		this.projectSimpleViews = facultyService.getProjectViewsByTeacherID(teacherID, getLanguage());
 		this.paperSimpleViews = facultyService.getPaperSimpleViewsByTeacherID(teacherID, getLanguage());

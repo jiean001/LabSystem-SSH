@@ -21,4 +21,13 @@ public class PaperbelongDaoimpl extends GenericDaoImpl<Paperbelong, Integer> imp
 		return this.getSession().get(Paperbelong.class, id);
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Paperbelong> getPaperbelongs(boolean isStu, int personID) {
+		String hql = "from Paperbelong paperbelong where paperbelong.paperbelongisstu =" + isStu + " and paperbelong.personId = "
+				+ personID;
+		List<Paperbelong> paperbelongs = this.getSession().createQuery(hql).list();
+		return paperbelongs;
+	}
+
 }

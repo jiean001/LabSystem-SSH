@@ -24,7 +24,7 @@
 			<div>${labInfoView.laboratoryTitle}</div>
             <hr />
             <div id="body">老师介绍
-                <div><a href="people.action">
+                <div><a href="people.action?teacherID=1">
                    <s:iterator value="teacherSimpleViews" status="li">
                      <div>
                         <s:property value="teacherName" />

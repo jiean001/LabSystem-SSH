@@ -3,16 +3,21 @@ package org.labsystem.domain.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.labsystem.domain.dao.iface.PaperDao;
+import org.labsystem.domain.dao.iface.PaperbelongDao;
 import org.labsystem.domain.dao.iface.ProbelongDao;
 import org.labsystem.domain.dao.iface.ProfessionaltitleDao;
 import org.labsystem.domain.dao.iface.ProjectDao;
 import org.labsystem.domain.dao.iface.StateDao;
 import org.labsystem.domain.dao.iface.TeacherDao;
+import org.labsystem.domain.entity.Paper;
+import org.labsystem.domain.entity.Paperbelong;
 import org.labsystem.domain.entity.Probelong;
 import org.labsystem.domain.entity.Project;
 import org.labsystem.domain.entity.State;
 import org.labsystem.domain.entity.Teacher;
 import org.labsystem.domain.service.iface.FacultyService;
+import org.labsystem.web.view.PaperSimpleView;
 import org.labsystem.web.view.ProfessionalTitleView;
 import org.labsystem.web.view.ProjectSimpleView;
 import org.labsystem.web.view.StateView;
@@ -32,9 +37,12 @@ public class FacultyServiceImpl implements FacultyService {
 	private ProbelongDao probelongDao;
 	@Autowired
 	private ProjectDao projectDao;
-
 	@Autowired
 	private StateDao stateDao;
+	@Autowired
+	private PaperbelongDao paperBelongDao;
+	@Autowired
+	private PaperDao paperDao;
 
 	@Override
 	public List<TeacherSimpleView> getAllTeacherSimpeView(boolean isChinese) {
@@ -70,6 +78,18 @@ public class FacultyServiceImpl implements FacultyService {
 			projectSimpleViews.add(tmpView);
 		}
 		return projectSimpleViews;
+	}
+
+	@Override
+	public List<PaperSimpleView> getPaperSimpleViewsByTeacherID(int teacherID, boolean isChinese) {
+		List<Paperbelong> paperbelongs = paperBelongDao.getPaperbelongs(false, teacherID);
+		List<PaperSimpleView> paperSimpleViews = new ArrayList<>();
+		for (Paperbelong paperbelong: paperbelongs) {
+			Paper paper = paperDao.getPaper(paperbelong.getPaperId());
+			PaperSimpleView tmpView = new PaperSimpleView(paper, isChinese);
+			paperSimpleViews.add(tmpView);
+		}
+		return paperSimpleViews;
 	}
 
 }

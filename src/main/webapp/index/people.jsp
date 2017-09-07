@@ -12,9 +12,9 @@
   <div id="box">
       <div id="left"><img src="（图片路径给我）"></div>
       <div id="right">
-         <div><a>姓名:(调用老师姓名)</a> </div>
+         <div><a>姓名:${teacherView.teacherName}</a> </div>
            <hr style="height:3px; border:none;border-top:1px double #7c7c7c;" />
-           <a>邮箱:(调用邮箱)</a></br></br>
+           <a>邮箱:${teacherView.teacherEmail}</a></br></br>
            <a>电话：（调用电话）</a>
        </div>
   </div>

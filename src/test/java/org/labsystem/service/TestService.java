@@ -66,6 +66,9 @@ public class TestService {
 
 		LOGGER.error("luxiongbo_testFacultyService_getProjectViewsByTeacherID"
 				+ JSON.toJSONString(facultyService.getProjectViewsByTeacherID(1, true)));
+		
+		LOGGER.error("luxiongbo_testFacultyService_getPaperSimpleViewsByTeacherID"
+				+ JSON.toJSONString(facultyService.getPaperSimpleViewsByTeacherID(1, true)));
 	}
 
 	@Test

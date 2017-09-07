@@ -9,17 +9,14 @@ import org.labsystem.domain.service.iface.FacultyService;
 import org.labsystem.domain.service.iface.LaboratoryInfoService;
 import org.labsystem.domain.service.iface.LatestNewsService;
 import org.labsystem.domain.service.iface.ResearchService;
-import org.labsystem.domain.service.iface.StudentService;
-import org.labsystem.util.Config;
 import org.labsystem.web.view.LaboratoryInfoView;
 import org.labsystem.web.view.NewsView;
 import org.labsystem.web.view.ResearchFieldView;
-import org.labsystem.web.view.StudentSimplyView;
 import org.labsystem.web.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Results({ @Result(name = "index", location = "/index/index.jsp")})
-public class IndexAction extends BaseAction {
+@Results({@Result(name = "people", location = "/index/people.jsp"), })
+public class TeacherAction extends BaseAction {
 	@Autowired
 	private ResearchService researchService;
 	@Autowired
@@ -28,48 +25,20 @@ public class IndexAction extends BaseAction {
 	private FacultyService facultyService;
 	@Autowired
 	private LatestNewsService latestNewsService;
-	@Autowired
-	private StudentService studentService;
 
-	//研究领域
 	private List<ResearchFieldView> researchFieldViews;
-	//实验室信息
 	private LaboratoryInfoView labInfoView;
-	//老师信息
 	private List<TeacherSimpleView> teacherSimpleViews;
-	//新闻
 	private List<NewsView> newsViews;
-	//年份
-	private List<String> allYears;
-	//学生
-	private List<StudentSimplyView> studentViews;
 
-	@Action("index")
-	public String index() {
+	@Action("people")
+	public String people() {
 		setLanguage(!getLanguage());
 		this.labInfoView = laboratoryInfoService.getLaboratoryInfoView(getLanguage());
 		this.researchFieldViews = researchService.getAllResearchFieldView(getLanguage());
 		this.teacherSimpleViews = facultyService.getAllTeacherSimpeView(getLanguage());
 		this.newsViews = latestNewsService.getAllNewsViewsByTimeDesc(getLanguage());
-		this.allYears = studentService.getAllYears();
-		this.studentViews = studentService.getStudentsByYear(Config.DEFAULTYEARS, getLanguage());
-		return "index";
-	}
-
-	public List<String> getAllYears() {
-		return allYears;
-	}
-
-	public void setAllYears(List<String> allYears) {
-		this.allYears = allYears;
-	}
-
-	public List<StudentSimplyView> getStudentViews() {
-		return studentViews;
-	}
-
-	public void setStudentViews(List<StudentSimplyView> studentViews) {
-		this.studentViews = studentViews;
+		return "people";
 	}
 
 	public List<NewsView> getNewsViews() {

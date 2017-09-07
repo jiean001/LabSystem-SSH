@@ -5,5 +5,6 @@ public class Config {
 	// true: Chinese
 	// false: English
 	public static final boolean DEFAULTLANGUAGE = false;
+	public static final String DEFAULTYEARS = "2017";
 
 }

@@ -44,6 +44,8 @@ public class IndexAction extends BaseAction {
 	//学生
 	private List<StudentSimplyView> studentViews;
 
+	int tm;
+
 	@Action("index")
 	public String index() {
 		setLanguage(!getLanguage());

@@ -13,9 +13,11 @@
 	<div id="all">
 		<div id="left">
 			<s:iterator value="researchFieldViews" status="li">
+			<a href="research.action?reschfdID=${reschfdID}" }>
 				<div id="leftbutton1">
 					<s:property value="researchFieldName" />
 				</div>
+				</a>
 				<p></p>
 			</s:iterator>
 
@@ -52,6 +54,10 @@
 		</div>
 		<hr />
 	</div>
-	<div id="footer" style="float: center;">联系我们</div>
+	<div id="footer" style="float: center;"><p>联系我们</p>
+	<p>电话：</p>
+	<p>地址：</p>
+	
+	</div>
 </body>
 </html>

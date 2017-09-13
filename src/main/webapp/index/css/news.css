@@ -1,23 +1,31 @@
 @charset "UTF-8";
+@charset "UTF-8";
 #all
 {
-	width:800px;
-	height:1300px;
-	background-color:#f9f9f9;
-	margin:0 auto;
-	color:#7c7c7c;
-	font-family:宋体;
+    width:800px;
+    height:1300px;
+    background-color:#f9f9f9;
+    margin:0 auto;
+    color:#7c7c7c;
+    font-family:宋体;
 }
 
-#top
+#box
 {
-	height:300px;
-	width:800px;
-	
+    width:800px;
+    heigh:50px;
+    text-align:center;
 }
 
-#foot
+#box1
 {
-	height:1000px;
 	width:800px;
+	height:200px;
+	border:1px;
+}
+
+
+.fontcolor
+{
+    color:#3d4247;
 }

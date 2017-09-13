@@ -15,20 +15,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class ResearchAction extends BaseAction {
 	@Autowired
 	private ResearchService researchService;
-	
+
 	private int reschfdID;
 	private Researchfield researchField;
 	//子领域的详细试图列表
 	private List<ResearchDetailsView> researchDetailsViews;
-	
-	
-	@Action("people")
+
+
+	@Action("research")
 	public String people() {
-        this.researchField = researchService.getResearchfield(reschfdID);
-        this.researchDetailsViews = researchService.getResearchDetailsViewByResearchField(researchField, getLanguage());
-		return "people";
+		this.researchField = researchService.getResearchfield(reschfdID);
+		this.researchDetailsViews = researchService.getResearchDetailsViewByResearchField(researchField, getLanguage());
+		return "research";
 	}
-	
+
 	public int getReschfdID() {
 		return reschfdID;
 	}

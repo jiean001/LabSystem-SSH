@@ -15,7 +15,7 @@
 	<constant name="struts.configuration.xml.reload" value="true" />
 
 	<!-- 是否使用struts的开发模式。开发模式会有更多的调试信息  -->
-	<constant name="struts.devMode" value="true" />
+	<constant name="struts.devMode" value="false" />
 
 	<!-- 设置浏览器是否缓存静态内容。默认值为true,开发阶段最好关闭 -->
 	<constant name="struts.serve.static.browserCache" value="false" />

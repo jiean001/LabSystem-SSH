@@ -15,7 +15,7 @@
 	top:240px;
 }
 
-#right
+#right 
 {
 	height:1200px;
 	width:1200px;
@@ -24,7 +24,7 @@
 
 #footer
 {
-	height:50px;
+	height:100px;
 	width:1500px;
 	background-color:#929b88;
 }

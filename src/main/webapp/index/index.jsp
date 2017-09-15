@@ -13,7 +13,7 @@
 	<div id="all">
 		<div id="left">
 			<s:iterator value="researchFieldViews" status="li">
-			<a href="research.action?reschfdID=${reschfdID}" }>
+			<a href="research.action?reschfdID=${researchFieldId}" }>
 				<div id="leftbutton1">
 					<s:property value="researchFieldName" />
 				</div>
@@ -37,11 +37,11 @@
             </div>
             </div>
             <hr />
-			<hr />
+			
 			<div id="body">最新消息</div>
 			<div>
 				<s:iterator value="newsViews" status="li">
-					<div id="leftbutton1">
+					<div>
 						<s:property value="newsTitle" />
 						<s:property value="newsTime" />
 					</div>

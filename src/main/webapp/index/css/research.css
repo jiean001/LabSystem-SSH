@@ -55,7 +55,7 @@ ul li {
   float: left;
   height: 300px;
   width: 50%;
-}
+}WS
 
 .content img {
   width: 80%;
@@ -67,7 +67,6 @@ ul li {
   float: right;
   width: 50%;
 }
-
 .introduce p {
   font-size: 16px;
   text-align: left;
@@ -84,6 +83,14 @@ ul li {
   display: list-item;
   list-style: none;
   border: none;
+}
+
+.paperlist a {
+	text-decoration: none;
+}
+
+.paperlist a:hover {
+	cursor: point;
 }
 
 .paperlist p {

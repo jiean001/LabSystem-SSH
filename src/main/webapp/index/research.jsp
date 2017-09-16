@@ -16,7 +16,7 @@
     </div>
     <div class="statement">
       <ul>
-        <c:forEach items="${researchDetailsViews }" var="r">
+        <c:forEach items="${researchDetailsViews }" var="r" varStatus="i">
         <li>
           <div class="subtitle">
             <p>${r.researchName }</p>
@@ -31,21 +31,13 @@
               </div>
               <div class="paper">
                 <ul>
-                  <li>
-                    <div class="paperlist">
-                      <p>	&bull;&nbsp;文章列表1</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="paperlist">
-                      <p>	&bull;&nbsp;文章列表2</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="paperlist">
-                      <p>	&bull;&nbsp;文章列表3</p>
-                    </div>
-                  </li>
+                    <c:forEach items="${r.researchPapers }" var="pa" varStatus="i">
+	                  <li>
+	                    <div class="paperlist">
+	                      <a href="${pa.paperLink }"><p>[&bull;&nbsp;${pa.paperName }]</p></a>
+	                    </div>
+	                  </li>
+                  </c:forEach>
                 </ul>
               </div>
             </div>

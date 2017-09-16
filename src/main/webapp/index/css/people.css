@@ -6,13 +6,23 @@
 	background-color:#f9f9f9;
 	margin:0 auto;
 	color:#7c7c7c;
-	font-family:宋体;
+	font-family: Georgia, "Times New Roman", Georgia, serif;
 }
 
-#box
+.box
 {
+	padding-top: 15px;
 	width:800px;
 	height:200px;
+    border-top: 2px solid #cfcfcf;
+}
+
+#box3 a {
+	text-decoration: none;
+}
+
+#box3 a:hover {
+	cursor: point;
 }
 
 #left
@@ -26,10 +36,21 @@
 
 #right
 {
+	margin-top: 30px;
 	width:500px;
-	height:200px;
+	height:auto;
 	margin-left:50px;
 	float:left;
+}
+
+#right .name {
+	padding: 4px;
+	padding-left: 0;
+	border-bottom: 2px solid #cfcfcf;
+}
+
+.info {
+	padding-top: 4px;
 }
 
 .fontcolor

@@ -1,93 +1,231 @@
-#all
-{
-	height:1500px;
-	width:1500px;
-	background-color:#929b88;
-	color:#7c7c7c;
-	font-family:ËÎÌו;
-}
-#left
-{
-	height:1200px;
-	width:200px;
-	float:left;
-	position:fixed;
-	top:240px;
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Georgia, serif;
+  }
+
+   ul li {
+	   margin: 0;
+	   padding: 0;
+   }
+
+.both {
+	background-color: #7F7F7F;
 }
 
-#right 
+.all
 {
-	height:1200px;
-	width:1200px;
-	float:right;
+	display: inline-block;
+	height: auto;
+	width: 100%;
+	color: #C3C3C3;
+	border-bottom: 3px solid #C3C3C3;
 }
 
-#footer
-{
-	height:100px;
-	width:1500px;
-	background-color:#929b88;
+.left {
+	width: 25%;
+	height: auto;
+	position: fixed;
+	float: left;
+	top: 30%;
 }
 
-#body
-{
-	width:1200px;
-	height:400px;
+.left ul {
+	padding-left: 0;
+	display: list-item;
+	list-style: none;
 }
 
-
-#leftbutton1
+.leftbutton
 {
-	border-radius:15px;
-	background:#8AC007;
-	text-align:center;
-	padding:20px;
-	width:200px;
-	heigt:100px;
+	border-radius: 15px;
+	background: #8AC007;
+	text-align: center;
+	padding: 27px;
+	margin: 20px;
+	margin-left: -10px;
+	width: 75%;
+	height: 20px;
 }
 
-#leftbutton2
-{
-	border-radius:15px;
-    background:red;
-    text-align:center;
-    padding:20px;
-    width:200px;
-    heigt:100px;
-
+.leftbutton p {
+	color: #7F7F61;
+	font-size: 18px;
+	margin-top: -5%;
+	font-weight: bold;
 }
 
-#leftbutton3
-{
-    border-radius:15px;
-    background:#f5c00a;
-    text-align:center;
-    padding:20px;
-    width:200px;
-    heigt:100px;
+.leftbutton a:hover {
+	text-decoration: none;
+	cursor: pointer;
 }
 
-#leftbutton4
-{
-    border-radius:15px;
-    background:#23cadc;
-    text-align:center;
-    padding:20px;
-    width:200px;
-    heigt:100px;
+.right {
+	width: 75%;
+	float: right;
+	margin: 10px auto;
+	padding-left: 20px;
 }
 
-#leftbutton5
-{
-    border-radius:15px;
-    background:#fb8af2;
-    text-align:center;
-    padding:20px;
-    width:200px;
-    heigt:100px;
+.title p {
+	font-size: 25px;
+	width: auto;
+	color: #C3C3C3;
+	text-align: left;
+	padding-bottom: 20px;
+	border-bottom: 3px solid #C3C3C3;
 }
 
-.fontcolor
-{
-    color:#3d4247;
+.changeL button {
+	width: auto;
+	height: 3%;
+	float: left;
+	margin: 10px;
+	margin-top: 40px;
+	background-color: #C3C3C3;
+}
+
+.changeL img {
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.changeL p {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.teacher {
+	border-bottom: 3px solid #C3C3C3;
+}
+
+.teacher p {
+	font-size: 23px;
+	text-indent: 25px;
+}
+
+.teacher ul li {
+	display: list-item;
+	list-style: none;
+}
+
+.teacher a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.teacher ul li p {
+	color: #3F48CC;
+}
+
+.newslist {
+	border-bottom: 3px solid #C3C3C3;
+}
+
+.newslist p {
+	font-size: 23px;
+	text-indent: 25px;
+}
+
+.newslist ul li {
+	display: list-item;
+	list-style: none;
+}
+
+.newslist ul li p {
+	font-size: 21px;
+	color: #C3C3C3;
+}
+
+.member .top {
+	display: inline-flex;
+	width: 100%;
+}
+
+.top p {
+	float: left;
+	width: 50%;
+	font-size: 23px;
+	text-indent: 25px;
+}
+
+.top #year {
+	float: right;
+}
+
+div.dropdown-menu.open {
+	min-width: 20px;
+	margin-top: -28px;
+	width: 40%;
+	left: 50%;
+}
+
+button.btn.dropdown-toggle.btn-default {
+	width: 40%;
+	margin-top: 15px;
+	left: 50%;
+}
+
+.member ul li {
+	display: list-item;
+	list-style: none;
+}
+
+.result .pro {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+}
+
+.result .pro .heng {
+	margin: 0;
+	color: #7092BE;
+	font-size: 21px;
+	text-indent: 64px;
+}
+
+.pro .list {
+	margin-left: 26px;
+	float: left;
+	width: auto;
+	height: 100px;
+}
+
+.list img {
+	margin: 10% auto;
+	width: 75px;
+	height: 75px;
+}
+
+.list p {
+	font-size: 21px;
+	margin-left: 10px;
+	margin-top: 49%;
+	float: right;
+	width: auto;
+	color: #C3C3C3;
+}
+
+.footer {
+	width: 100%;
+	height: auto;
+	color: #C3C3C3;
+	padding: 10px;
+}
+
+.information p {
+	margin-top: 0;
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 25px;
+}
+
+.detailinfo p {
+	
+	line-height: 1.8;
+	text-align: center;
+	font-size: 18px;
 }

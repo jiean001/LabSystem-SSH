@@ -51,7 +51,7 @@ body {
 .leftbutton p {
 	color: #7F7F61;
 	font-size: 18px;
-	margin-top: -5%;
+	margin-top: -4%;
 	font-weight: bold;
 }
 
@@ -175,6 +175,7 @@ button.btn.dropdown-toggle.btn-default {
 }
 
 .result .pro {
+	margin-bottom: 20px;
 	width: 100%;
 	height: auto;
 	display: inline-block;

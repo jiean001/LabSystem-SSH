@@ -1,5 +1,5 @@
 window.onload = function () {
-    
+	
     $('#year').selectpicker({
         'selectedText': '2017'
     });
@@ -21,9 +21,3 @@ function getRandomColor() {
     return c;
 }
 
-function changeLanguage() {
-    var changeB = document.getElementById("changeL");
-    changeB.addEventListener('click', function(){
-        
-    });
-}

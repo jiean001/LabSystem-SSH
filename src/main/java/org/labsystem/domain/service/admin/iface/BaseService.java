@@ -11,7 +11,7 @@ import org.labsystem.web.user.view.SourceView;
 
 public interface BaseService {
 	//获得所有的学历
-	List<EducationBackGroundView> getAllEducationBackGroundViews();
+	List<EducationBackGroundView> getAllEducationBackGroundViews(boolean isChinese);
 	//获得学历
 	Edubkgrd getEdubkgrd(int edubkgrdID);
 	//获得学历视图
@@ -22,7 +22,7 @@ public interface BaseService {
 
 
 	/*paper source*/
-	List<SourceView> getAllSourceViews();
+	List<SourceView> getAllSourceViews(boolean isChinese);
 	Source getSource(int sourceID);
 	SourceView getSourceView(int sourceID,  boolean isChinese);
 

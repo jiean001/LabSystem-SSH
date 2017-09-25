@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.labsystem.domain.entity.Researchfield;
+import org.labsystem.domain.service.admin.iface.BaseService;
 import org.labsystem.domain.service.user.iface.FacultyService;
 import org.labsystem.domain.service.user.iface.LaboratoryInfoService;
 import org.labsystem.domain.service.user.iface.LatestNewsService;
@@ -29,6 +30,20 @@ public class TestService {
 	private LatestNewsService latestNewsService;
 	@Autowired
 	private FacultyService facultyService;
+	@Autowired
+	private BaseService baseService;
+
+	void testBaseService() {
+		/*education background*/
+		LOGGER.error("luxb_getAllEducationBackGroundViews" + JSON.toJSONString(baseService.getAllEducationBackGroundViews(true)));
+		LOGGER.error("luxb_getEdubkgrd" + JSON.toJSONString(baseService.getEdubkgrd(1)));
+		LOGGER.error("luxb_getEducationBackGroundView" + JSON.toJSONString(baseService.getEducationBackGroundView(1, true)));
+
+		/*source*/
+		LOGGER.error("luxb_getAllSourceViews" + JSON.toJSONString(baseService.getAllSourceViews(true)));
+		LOGGER.error("luxb_getSourceView" + JSON.toJSONString(baseService.getSourceView(1, true)));
+		LOGGER.error("luxb_getSource" + JSON.toJSONString(baseService.getSource(1)));
+	}
 
 	void testResearchService() {
 		LOGGER.error(
@@ -66,18 +81,19 @@ public class TestService {
 
 		LOGGER.error("luxiongbo_testFacultyService_getProjectViewsByTeacherID"
 				+ JSON.toJSONString(facultyService.getProjectViewsByTeacherID(1, true)));
-		
+
 		LOGGER.error("luxiongbo_testFacultyService_getPaperSimpleViewsByTeacherID"
 				+ JSON.toJSONString(facultyService.getPaperSimpleViewsByTeacherID(1, true)));
 	}
 
 	@Test
 	public void testMain() {
-		testResearchService();
-		testLaboratoryInfoService();
-		testStudentSerive();
-		testLatestNewsService();
-		testFacultyService();
+		//		testResearchService();
+		//		testLaboratoryInfoService();
+		//		testStudentSerive();
+		//		testLatestNewsService();
+		//		testFacultyService();
+		testBaseService();
 	}
 
 }

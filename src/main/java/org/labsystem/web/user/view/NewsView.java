@@ -1,4 +1,4 @@
-package org.labsystem.web.view;
+package org.labsystem.web.user.view;
 
 import java.util.Date;
 

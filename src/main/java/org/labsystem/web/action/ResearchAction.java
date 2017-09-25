@@ -7,8 +7,8 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
 import org.labsystem.domain.entity.Researchfield;
-import org.labsystem.domain.service.iface.ResearchService;
-import org.labsystem.web.view.ResearchDetailsView;
+import org.labsystem.domain.service.user.iface.ResearchService;
+import org.labsystem.web.user.view.ResearchDetailsView;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Results({@Result(name = "research", location = "/index/research.jsp"), })

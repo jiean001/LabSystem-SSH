@@ -1,4 +1,4 @@
-package org.labsystem.domain.service.impl;
+package org.labsystem.domain.service.user.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,9 @@ import org.labsystem.domain.dao.iface.StudentDao;
 import org.labsystem.domain.dao.iface.StuyearDao;
 import org.labsystem.domain.entity.Student;
 import org.labsystem.domain.entity.Stuyear;
-import org.labsystem.domain.service.iface.StudentService;
-import org.labsystem.web.view.EducationBackGroundView;
-import org.labsystem.web.view.StudentSimplyView;
+import org.labsystem.domain.service.user.iface.StudentService;
+import org.labsystem.web.user.view.EducationBackGroundView;
+import org.labsystem.web.user.view.StudentSimplyView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

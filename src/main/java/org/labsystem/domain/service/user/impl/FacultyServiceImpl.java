@@ -1,4 +1,4 @@
-package org.labsystem.domain.service.impl;
+package org.labsystem.domain.service.user.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +16,12 @@ import org.labsystem.domain.entity.Probelong;
 import org.labsystem.domain.entity.Project;
 import org.labsystem.domain.entity.State;
 import org.labsystem.domain.entity.Teacher;
-import org.labsystem.domain.service.iface.FacultyService;
-import org.labsystem.web.view.PaperSimpleView;
-import org.labsystem.web.view.ProfessionalTitleView;
-import org.labsystem.web.view.ProjectSimpleView;
-import org.labsystem.web.view.StateView;
-import org.labsystem.web.view.TeacherSimpleView;
+import org.labsystem.domain.service.user.iface.FacultyService;
+import org.labsystem.web.user.view.PaperSimpleView;
+import org.labsystem.web.user.view.ProfessionalTitleView;
+import org.labsystem.web.user.view.ProjectSimpleView;
+import org.labsystem.web.user.view.StateView;
+import org.labsystem.web.user.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

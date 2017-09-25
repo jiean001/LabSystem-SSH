@@ -1,4 +1,4 @@
-package org.labsystem.domain.service.impl;
+package org.labsystem.domain.service.user.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +13,10 @@ import org.labsystem.domain.entity.Reschfldres;
 import org.labsystem.domain.entity.Research;
 import org.labsystem.domain.entity.Researchfield;
 import org.labsystem.domain.entity.Respaper;
-import org.labsystem.domain.service.iface.ResearchService;
-import org.labsystem.web.view.PaperSimpleView;
-import org.labsystem.web.view.ResearchDetailsView;
-import org.labsystem.web.view.ResearchFieldView;
+import org.labsystem.domain.service.user.iface.ResearchService;
+import org.labsystem.web.user.view.PaperSimpleView;
+import org.labsystem.web.user.view.ResearchDetailsView;
+import org.labsystem.web.user.view.ResearchFieldView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

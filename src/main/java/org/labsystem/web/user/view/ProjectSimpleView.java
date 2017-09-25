@@ -1,4 +1,4 @@
-package org.labsystem.web.view;
+package org.labsystem.web.user.view;
 
 import org.labsystem.domain.entity.Project;
 import org.labsystem.util.Feature;

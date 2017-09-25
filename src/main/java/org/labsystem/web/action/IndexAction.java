@@ -5,17 +5,17 @@ import java.util.List;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
-import org.labsystem.domain.service.iface.FacultyService;
-import org.labsystem.domain.service.iface.LaboratoryInfoService;
-import org.labsystem.domain.service.iface.LatestNewsService;
-import org.labsystem.domain.service.iface.ResearchService;
-import org.labsystem.domain.service.iface.StudentService;
+import org.labsystem.domain.service.user.iface.FacultyService;
+import org.labsystem.domain.service.user.iface.LaboratoryInfoService;
+import org.labsystem.domain.service.user.iface.LatestNewsService;
+import org.labsystem.domain.service.user.iface.ResearchService;
+import org.labsystem.domain.service.user.iface.StudentService;
 import org.labsystem.util.Config;
-import org.labsystem.web.view.LaboratoryInfoView;
-import org.labsystem.web.view.NewsView;
-import org.labsystem.web.view.ResearchFieldView;
-import org.labsystem.web.view.StudentSimplyView;
-import org.labsystem.web.view.TeacherSimpleView;
+import org.labsystem.web.user.view.LaboratoryInfoView;
+import org.labsystem.web.user.view.NewsView;
+import org.labsystem.web.user.view.ResearchFieldView;
+import org.labsystem.web.user.view.StudentSimplyView;
+import org.labsystem.web.user.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Results({ @Result(name = "index", location = "/index/index.jsp")})

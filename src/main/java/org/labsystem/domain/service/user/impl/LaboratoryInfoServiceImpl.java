@@ -1,8 +1,8 @@
-package org.labsystem.domain.service.impl;
+package org.labsystem.domain.service.user.impl;
 
 import org.labsystem.domain.dao.iface.LaboratoryInfoDao;
-import org.labsystem.domain.service.iface.LaboratoryInfoService;
-import org.labsystem.web.view.LaboratoryInfoView;
+import org.labsystem.domain.service.user.iface.LaboratoryInfoService;
+import org.labsystem.web.user.view.LaboratoryInfoView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

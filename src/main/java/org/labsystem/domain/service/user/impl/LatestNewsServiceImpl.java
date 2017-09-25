@@ -1,12 +1,12 @@
-package org.labsystem.domain.service.impl;
+package org.labsystem.domain.service.user.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.NewsDao;
 import org.labsystem.domain.entity.News;
-import org.labsystem.domain.service.iface.LatestNewsService;
-import org.labsystem.web.view.NewsView;
+import org.labsystem.domain.service.user.iface.LatestNewsService;
+import org.labsystem.web.user.view.NewsView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

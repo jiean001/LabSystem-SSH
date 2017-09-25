@@ -1,8 +1,8 @@
-package org.labsystem.domain.service.iface;
+package org.labsystem.domain.service.user.iface;
 
 import java.util.List;
 
-import org.labsystem.web.view.StudentSimplyView;
+import org.labsystem.web.user.view.StudentSimplyView;
 
 public interface StudentService {
 	List<String> getAllYears();

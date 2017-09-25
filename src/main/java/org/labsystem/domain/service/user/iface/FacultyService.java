@@ -1,10 +1,10 @@
-package org.labsystem.domain.service.iface;
+package org.labsystem.domain.service.user.iface;
 
 import java.util.List;
 
-import org.labsystem.web.view.PaperSimpleView;
-import org.labsystem.web.view.ProjectSimpleView;
-import org.labsystem.web.view.TeacherSimpleView;
+import org.labsystem.web.user.view.PaperSimpleView;
+import org.labsystem.web.user.view.ProjectSimpleView;
+import org.labsystem.web.user.view.TeacherSimpleView;
 
 public interface FacultyService {
 	List<TeacherSimpleView> getAllTeacherSimpeView(boolean isChinese);

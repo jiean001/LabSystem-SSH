@@ -5,10 +5,10 @@ import java.util.List;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
-import org.labsystem.domain.service.iface.FacultyService;
-import org.labsystem.web.view.PaperSimpleView;
-import org.labsystem.web.view.ProjectSimpleView;
-import org.labsystem.web.view.TeacherSimpleView;
+import org.labsystem.domain.service.user.iface.FacultyService;
+import org.labsystem.web.user.view.PaperSimpleView;
+import org.labsystem.web.user.view.ProjectSimpleView;
+import org.labsystem.web.user.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Results({@Result(name = "people", location = "/index/people.jsp"), })

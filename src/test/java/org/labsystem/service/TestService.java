@@ -4,11 +4,11 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.labsystem.domain.entity.Researchfield;
-import org.labsystem.domain.service.iface.FacultyService;
-import org.labsystem.domain.service.iface.LaboratoryInfoService;
-import org.labsystem.domain.service.iface.LatestNewsService;
-import org.labsystem.domain.service.iface.ResearchService;
-import org.labsystem.domain.service.iface.StudentService;
+import org.labsystem.domain.service.user.iface.FacultyService;
+import org.labsystem.domain.service.user.iface.LaboratoryInfoService;
+import org.labsystem.domain.service.user.iface.LatestNewsService;
+import org.labsystem.domain.service.user.iface.ResearchService;
+import org.labsystem.domain.service.user.iface.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 

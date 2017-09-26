@@ -51,8 +51,8 @@
     <div class="both">
         <div class="all">
             <div class="changeL">
-            <form action="index.action" method="get">
-                <button value="${language}" type="submit" id="changeL" class="btn btn-default" />
+            <form action="exchangeL.action" method="get">
+                <button value="${crtLanguage}" type="submit" id="changeL" class="btn btn-default" />
                     <img src="image/china.png" />
                     <p>Chinese</p>
                 </button>

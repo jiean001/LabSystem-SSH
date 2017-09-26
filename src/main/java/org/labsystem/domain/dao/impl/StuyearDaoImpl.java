@@ -25,7 +25,7 @@ public class StuyearDaoImpl extends GenericDaoImpl<Stuyear, Integer> implements 
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<String> getAllYears() {
-		String sql = "select  distinct  year from stuyear";
+		String sql = "select  distinct  year from stuyear syear ORDER BY syear.year desc";
 		SQLQuery query = this.getSession().createSQLQuery(sql);
 		@SuppressWarnings("rawtypes")
 		List list = query.list();

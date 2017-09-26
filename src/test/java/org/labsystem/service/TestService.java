@@ -90,10 +90,10 @@ public class TestService {
 	public void testMain() {
 		//		testResearchService();
 		//		testLaboratoryInfoService();
-		//		testStudentSerive();
+		testStudentSerive();
 		//		testLatestNewsService();
 		//		testFacultyService();
-		testBaseService();
+		//testBaseService();
 	}
 
 }

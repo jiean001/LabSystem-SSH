@@ -44,13 +44,11 @@ public class IndexAction extends BaseAction {
 	//学生
 	private List<StudentSimplyView> studentViews;
 	//language
-	private boolean language;
+	private boolean crtLanguage;
 
 
 	@Action("index")
 	public String index() {
-		setLanguage(!getLanguage());
-		this.language = getLanguage();
 		this.labInfoView = laboratoryInfoService.getLaboratoryInfoView(getLanguage());
 		this.researchFieldViews = researchService.getAllResearchFieldView(getLanguage());
 		this.teacherSimpleViews = facultyService.getAllTeacherSimpeView(getLanguage());
@@ -58,6 +56,23 @@ public class IndexAction extends BaseAction {
 		this.allYears = studentService.getAllYears();
 		this.studentViews = studentService.getStudentsByYear(Config.DEFAULTYEARS, getLanguage());
 		return "index";
+	}
+
+	@Action("exchangeL")
+	public String exchangeL() {
+		//if(getLanguage() != isCrtLanguage()) {
+		setLanguage(!getLanguage());
+		setCrtLanguage(getLanguage());
+		//}
+		return "index";
+	}
+
+	public boolean isCrtLanguage() {
+		return crtLanguage;
+	}
+
+	public void setCrtLanguage(boolean crtLanguage) {
+		this.crtLanguage = crtLanguage;
 	}
 
 	public List<String> getAllYears() {

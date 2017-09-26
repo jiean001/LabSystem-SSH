@@ -10,6 +10,7 @@ import org.labsystem.domain.entity.Paper;
 import org.labsystem.domain.entity.Paperbelong;
 import org.labsystem.domain.entity.Source;
 import org.labsystem.domain.service.admin.iface.BaseService;
+import org.labsystem.util.Config;
 import org.labsystem.web.user.view.EducationBackGroundView;
 import org.labsystem.web.user.view.SourceView;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,31 @@ public class BaseServiceImpl implements BaseService {
 	EdubkgrdDao edubkgrdDao;
 	@Autowired
 	SourceDao sourceDao;
+
+	@Override
+	public boolean checkLogin(int loginType, String userName, String password) {
+		switch(loginType) {
+		case Config.LOGIN_TYPE_ADMIN:
+			if((userName == "admin") && (password == "123456"))
+			{
+				return true;
+			}
+			break;
+		case Config.LOGIN_TYPE_STUDENT:
+			if((userName == "student") && (password == "123456"))
+			{
+				return true;
+			}
+			break;
+		case Config.LOGIN_TYPE_TEACHER:
+			if((userName == "teacher") && (password == "123456"))
+			{
+				return true;
+			}
+			break;
+		}
+		return false;
+	}
 
 	@Override
 	public List<EducationBackGroundView> getAllEducationBackGroundViews(boolean isChinese) {
@@ -99,5 +125,7 @@ public class BaseServiceImpl implements BaseService {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+
 
 }

@@ -10,6 +10,9 @@ import org.labsystem.web.user.view.EducationBackGroundView;
 import org.labsystem.web.user.view.SourceView;
 
 public interface BaseService {
+	//检查登陆
+	boolean checkLogin(int loginType, String userName, String password);
+
 	//获得所有的学历
 	List<EducationBackGroundView> getAllEducationBackGroundViews(boolean isChinese);
 	//获得学历

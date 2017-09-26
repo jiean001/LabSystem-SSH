@@ -7,4 +7,8 @@ public class Config {
 	public static final boolean DEFAULTLANGUAGE = false;
 	public static final String DEFAULTYEARS = "2017";
 
+	public static final int LOGIN_TYPE_TEACHER = 1;
+	public static final int LOGIN_TYPE_ADMIN = 2;
+	public static final int LOGIN_TYPE_STUDENT= 3;
+
 }

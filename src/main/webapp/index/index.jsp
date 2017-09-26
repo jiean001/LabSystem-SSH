@@ -20,15 +20,18 @@
     
     <script type="text/javascript">
     
-	    function changeLang() {
+	    window.onload = function()
+	    {
 	        
 	        var but = document.getElementById("changeL");
+	        
+	        var bool = but.value;
 	        
 	        var imag = but.getElementsByTagName("img");
 	        
 	        var content = but.getElementsByTagName("p");
 	        
-	        if(content[0].innerHTML == "Chinese")
+	        if(bool == "false")
 	        {
 	            content[0].innerHTML = "English";
 	            imag[0].setAttribute("src","image/english.png");
@@ -49,7 +52,7 @@
         <div class="all">
             <div class="changeL">
             <form action="index.action" method="get">
-                <button type="submit" id="changeL" class="btn btn-default" onclick="changeLang()" />
+                <button value="${language}" type="submit" id="changeL" class="btn btn-default" />
                     <img src="image/china.png" />
                     <p>Chinese</p>
                 </button>

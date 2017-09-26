@@ -43,11 +43,14 @@ public class IndexAction extends BaseAction {
 	private List<String> allYears;
 	//学生
 	private List<StudentSimplyView> studentViews;
+	//language
+	private boolean language;
 
 
 	@Action("index")
 	public String index() {
 		setLanguage(!getLanguage());
+		this.language = getLanguage();
 		this.labInfoView = laboratoryInfoService.getLaboratoryInfoView(getLanguage());
 		this.researchFieldViews = researchService.getAllResearchFieldView(getLanguage());
 		this.teacherSimpleViews = facultyService.getAllTeacherSimpeView(getLanguage());

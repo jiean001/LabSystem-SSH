@@ -60,11 +60,9 @@ public class IndexAction extends BaseAction {
 
 	@Action("exchangeL")
 	public String exchangeL() {
-		//if(getLanguage() != isCrtLanguage()) {
 		setLanguage(!getLanguage());
 		setCrtLanguage(getLanguage());
-		//}
-		return "index";
+		return index();
 	}
 
 	public boolean isCrtLanguage() {

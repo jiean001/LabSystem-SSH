@@ -39,6 +39,21 @@ public class TestService {
 		LOGGER.error("luxb_getEdubkgrd" + JSON.toJSONString(baseService.getEdubkgrd(1)));
 		LOGGER.error("luxb_getEducationBackGroundView" + JSON.toJSONString(baseService.getEducationBackGroundView(1, true)));
 
+		//professional title
+		LOGGER.error("luxb_getAllProfessionalTitleViews" + JSON.toJSONString(baseService.getAllProfessionalTitleViews(true)));
+		LOGGER.error("luxb_getProfessionaltitle" + JSON.toJSONString(baseService.getProfessionaltitle(1)));
+		LOGGER.error("luxb_getEducationBackGroundView" + JSON.toJSONString(baseService.getProfessionalTitleView(1, true)));
+
+		//SupervisorType
+		LOGGER.error("luxb_getAllSupervisorTypeViews" + JSON.toJSONString(baseService.getAllSupervisorTypeViews(true)));
+		LOGGER.error("luxb_getSupervisortype" + JSON.toJSONString(baseService.getSupervisortype(1)));
+		LOGGER.error("luxb_getSupervisorTypeView" + JSON.toJSONString(baseService.getSupervisorTypeView(1, true)));
+
+		//state
+		LOGGER.error("luxb_getAllStateViews" + JSON.toJSONString(baseService.getAllStateViews(true)));
+		LOGGER.error("luxb_getState" + JSON.toJSONString(baseService.getState(1)));
+		LOGGER.error("luxb_getStateView" + JSON.toJSONString(baseService.getStateView(1, true)));
+
 		/*source*/
 		LOGGER.error("luxb_getAllSourceViews" + JSON.toJSONString(baseService.getAllSourceViews(true)));
 		LOGGER.error("luxb_getSourceView" + JSON.toJSONString(baseService.getSourceView(1, true)));
@@ -90,10 +105,10 @@ public class TestService {
 	public void testMain() {
 		//		testResearchService();
 		//		testLaboratoryInfoService();
-		testStudentSerive();
+		//      testStudentSerive();
 		//		testLatestNewsService();
 		//		testFacultyService();
-		//testBaseService();
+		testBaseService();
 	}
 
 }

@@ -4,15 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.labsystem.domain.dao.iface.EdubkgrdDao;
+import org.labsystem.domain.dao.iface.ProfessionaltitleDao;
 import org.labsystem.domain.dao.iface.SourceDao;
+import org.labsystem.domain.dao.iface.StateDao;
+import org.labsystem.domain.dao.iface.SupervisortypeDao;
 import org.labsystem.domain.entity.Edubkgrd;
 import org.labsystem.domain.entity.Paper;
 import org.labsystem.domain.entity.Paperbelong;
+import org.labsystem.domain.entity.Professionaltitle;
 import org.labsystem.domain.entity.Source;
+import org.labsystem.domain.entity.State;
+import org.labsystem.domain.entity.Supervisortype;
 import org.labsystem.domain.service.admin.iface.BaseService;
 import org.labsystem.util.Config;
 import org.labsystem.web.user.view.EducationBackGroundView;
+import org.labsystem.web.user.view.ProfessionalTitleView;
 import org.labsystem.web.user.view.SourceView;
+import org.labsystem.web.user.view.StateView;
+import org.labsystem.web.user.view.SupervisorTypeView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,6 +33,12 @@ public class BaseServiceImpl implements BaseService {
 	EdubkgrdDao edubkgrdDao;
 	@Autowired
 	SourceDao sourceDao;
+	@Autowired
+	ProfessionaltitleDao professionaltitleDao;
+	@Autowired
+	SupervisortypeDao supervisortypeDao;
+	@Autowired
+	StateDao stateDao;
 
 	@Override
 	public boolean checkLogin(int loginType, String userName, String password) {
@@ -71,6 +86,66 @@ public class BaseServiceImpl implements BaseService {
 	}
 
 	@Override
+	public List<ProfessionalTitleView> getAllProfessionalTitleViews(boolean isChinese) {
+		List<Professionaltitle> professionaltitles = professionaltitleDao.findAll();
+		List<ProfessionalTitleView> professionalTitleViews = new ArrayList<>();
+		for(Professionaltitle professionaltitle: professionaltitles) {
+			professionalTitleViews.add(new ProfessionalTitleView(professionaltitle, isChinese));
+		}
+		return professionalTitleViews;
+	}
+
+	@Override
+	public Professionaltitle getProfessionaltitle(int professionaltitleID) {
+		return professionaltitleDao.get(professionaltitleID);
+	}
+
+	@Override
+	public ProfessionalTitleView getProfessionalTitleView(int professionaltitleID, boolean isChinese) {
+		return new ProfessionalTitleView(this.getProfessionaltitle(professionaltitleID), isChinese);
+	}
+
+	@Override
+	public List<SupervisorTypeView> getAllSupervisorTypeViews(boolean isChinses) {
+		List<Supervisortype> supervisortypes = supervisortypeDao.findAll();
+		List<SupervisorTypeView> supervisorTypeViews = new ArrayList<>();
+		for(Supervisortype supervisortype: supervisortypes) {
+			supervisorTypeViews.add(new SupervisorTypeView(supervisortype, isChinses));
+		}
+		return supervisorTypeViews;
+	}
+
+	@Override
+	public Supervisortype getSupervisortype(int supervisortypeId) {
+		return supervisortypeDao.get(supervisortypeId);
+	}
+
+	@Override
+	public SupervisorTypeView getSupervisorTypeView(int supervisortypeId, boolean isChinese) {
+		return new SupervisorTypeView(this.getSupervisortype(supervisortypeId), isChinese);
+	}
+
+	@Override
+	public List<StateView> getAllStateViews(boolean isChinese) {
+		List<State> states = stateDao.findAll();
+		List<StateView> stateViews = new ArrayList<>();
+		for(State state: states) {
+			stateViews.add(new StateView(state, isChinese));
+		}
+		return stateViews;
+	}
+
+	@Override
+	public State getState(int stateId) {
+		return stateDao.get(stateId);
+	}
+
+	@Override
+	public StateView getStateView(int stateId, boolean isChinese) {
+		return new StateView(this.getState(stateId), isChinese);
+	}
+
+	@Override
 	public List<SourceView> getAllSourceViews(boolean isChinese) {
 		List<Source> sources = sourceDao.findAll();
 		List<SourceView> sourceViews = new ArrayList<>();
@@ -89,6 +164,8 @@ public class BaseServiceImpl implements BaseService {
 	public SourceView getSourceView(int sourceID, boolean isChinese) {
 		return new SourceView(this.getSource(sourceID), isChinese);
 	}
+
+
 
 	@Override
 	public boolean addPaper(Paper paper) {
@@ -125,6 +202,7 @@ public class BaseServiceImpl implements BaseService {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 
 
 

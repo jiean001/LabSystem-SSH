@@ -11,7 +11,8 @@
 <body>
 <div id="all" class="fontcolor">
   <div class="box" id="box">
-      <div id="left"><img src="../images/${teacherView.teacherPic }.jpg"></div>
+      <!--div id="left"><img src="image/english.png"></div-->
+      <div id="left"><img src="${teacherView.teacherPic}"></div>
       <div id="right">
          <div class="name"><a>${teacherView.teacherName}</a> </div>
          <div class="info">

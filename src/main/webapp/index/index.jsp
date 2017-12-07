@@ -22,6 +22,10 @@
     
 	    window.onload = function()
 	    {
+
+	        $('#year').selectpicker({
+	            'selectedText': '2017'
+	        });
 	        
 	        var but = document.getElementById("changeL");
 	        
@@ -31,6 +35,13 @@
 	        
 	        var content = but.getElementsByTagName("p");
 	        
+	        var height1 = document.documentElement.scrollHeight;
+	        var left1 = document.getElementsByClassName("left")[0].clientHeight;
+	        var top1 = (height1 - left1) / 4;
+	        document.getElementsByClassName("left")[0].style.top = top1+"px";
+	        
+	       
+	        
 	        if(bool == "false")
 	        {
 	            content[0].innerHTML = "English";
@@ -39,16 +50,79 @@
 	        else {
 	            content[0].innerHTML = "Chinese";
 	            imag[0].setAttribute("src","image/china.png");
-	        }
-	            
+	        }	
+	        
+	        
 	    }
-    
+
+        function changeYear(){
+             var year = $("#year").find("option:selected").val();
+             $.ajax({
+                 type:"post",
+                 url:'ajaxt.action',
+                 data:{//数据源
+                     year:year
+                 },
+                 dataType:"JSON",
+                 success:function(data){
+                     $("#masterList").empty();
+                     $("#phdList").empty();
+                     $("#interList").empty();
+                	 $.each(data,function(i,list){ 
+
+                         var _tr = `<li class="col-xs-2 col-md-1" style="margin: 8px auto;">
+                                     <a href="javascript:;" class="thumbnail" >` +
+                                        "<img src='" + list.stupic + "' >"+
+                                        "<div class='caption' >" + 
+                                             "<p>" + list.studentname+ "</p> " +
+                                        `</div>
+                                     </a>
+                                 </li>`;  
+                		 if(list.edubkgrdID == "2")
+               			 {
+                             $("#masterList").append(_tr);
+               			 }
+                		 else if(list.edubkgrdID == "1"){
+                			 $("#phdList").append(_tr);
+                		 }
+                		 else if(list.edubkgrdID == "6"){
+                			 $("#interList").append(_tr);
+                		 }
+                     })
+                 },
+                 error:function(){
+                	 alert("fail")
+                 }
+             });
+        }
     </script>
+    
+    <style>
+        .thumbnail,.caption{
+            padding: 0!important;
+            text-align: center;
+        }
+        .caption p{
+            height: 3em!important;
+        }
+        
+        a.thumbnail {
+        
+        }
+        
+        a.thumbnail:hover{
+            text-decoration: none;
+        }
+
+        .thumbnail *{
+            margin : 0!important;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div class="both">
+    <div class="both container-fuild">
         <div class="all">
             <div class="changeL">
             <form action="exchangeL.action" method="get">
@@ -96,7 +170,7 @@
                 <div class="member">
                     <div class="top">
                         <p>Lab member</p>
-                        <select class="easyui-year" id="year" data-live-search="false">
+                        <select class="easyui-year" id="year" data-live-search="false" onchange="changeYear()">
                             <c:forEach items="${allYears }" var="y">
                                 <option value="${y }">
                                 ${y }
@@ -106,17 +180,48 @@
                     </div>
                     <div class="result">
                         <div class="pro">
-                            <p class="heng">Student</p>
-                            <ul>
-                             <c:forEach items="${studentSimplyViews }" var="s">
-                                <li>
-                                    <div class="list">
-                                        <img src="image/${s.stupic }.jpg" />
-                                        <p>${s.studentname }</p>
-                                    </div>
+                            <p class="heng">Master Student</p>
+                            <ul id="masterList" class="row">
+                             <c:forEach items="${masterStuViews }" var="m">
+                                <li class="col-xs-2 col-md-1" style="margin: 8px auto;">
+									<a href="javascript:;" class="thumbnail">
+									   <img src="${m.stupic}" alt="...">
+									   <div class="caption">
+                                            <p>${m.studentname }</p>
+                                       </div>
+									</a>
                                 </li>
                              </c:forEach>
                             </ul>
+                            
+                            <p class="heng">PHD Student</p>
+                            <ul id="phdList">
+                             <c:forEach items="${phdStuViews }" var="m">
+                                <li class="col-xs-2 col-md-1" style="margin: 8px auto;">
+                                    <a href="javascript:;" class="thumbnail">
+                                       <img src="${m.stupic}" alt="...">
+                                       <div class="caption">
+                                            <p>${m.studentname }</p>
+                                       </div>
+                                    </a>
+                                </li>
+                             </c:forEach>
+                            </ul>
+                            
+                            <p class="heng">International Student</p>
+                            <ul id="interList" class="row">
+                             <c:forEach items="${internationalStuViews }" var="m">
+                                <li class="col-xs-2 col-md-1" style="margin: 8px auto;">
+                                    <a href="javascript:;" class="thumbnail">
+                                       <img src="${m.stupic}" alt="...">
+                                       <div class="caption">
+                                            <p>${m.studentname }</p>
+                                       </div>
+                                    </a>
+                                </li>
+                             </c:forEach>
+                            </ul>
+                            
                         </div>
                     </div>
                 </div>

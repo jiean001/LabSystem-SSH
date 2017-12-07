@@ -8,4 +8,10 @@ public interface StudentService {
 	List<String> getAllYears();
 
 	List<StudentSimplyView> getStudentsByYear(String year, boolean isChinese);
+
+	List<StudentSimplyView> getInternaltionalStudentsByYear(String year, boolean isChinese);
+
+	List<StudentSimplyView> getMasterStudentsByYear(String year, boolean isChinese);
+
+	List<StudentSimplyView> getPHDStudentsByYear(String year, boolean isChinese);
 }

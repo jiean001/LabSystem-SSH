@@ -1,7 +1,13 @@
 package org.labsystem.web.action;
 
+import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
@@ -17,6 +23,12 @@ import org.labsystem.web.user.view.ResearchFieldView;
 import org.labsystem.web.user.view.StudentSimplyView;
 import org.labsystem.web.user.view.TeacherSimpleView;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import com.alibaba.fastjson.JSON;
+import com.opensymphony.xwork2.ActionContext;
+
+import net.sf.json.JSONArray;
+
 
 @Results({ @Result(name = "index", location = "/index/index.jsp")})
 public class IndexAction extends BaseAction {
@@ -46,16 +58,53 @@ public class IndexAction extends BaseAction {
 	//language
 	private boolean crtLanguage;
 
+	private List<StudentSimplyView> internationalStuViews;
+	private List<StudentSimplyView> phdStuViews;
+	private List<StudentSimplyView> masterStuViews;
+
+	private static Log LOGGER = LogFactory.getLog("runLogger");
 
 	@Action("index")
 	public String index() {
+		//Map存储json数据
+		//Map<String, Object> info = new HashMap<String, Object>();
+		String year = ServletActionContext.getRequest().getParameter("year");
 		this.labInfoView = laboratoryInfoService.getLaboratoryInfoView(getLanguage());
 		this.researchFieldViews = researchService.getAllResearchFieldView(getLanguage());
 		this.teacherSimpleViews = facultyService.getAllTeacherSimpeView(getLanguage());
 		this.newsViews = latestNewsService.getAllNewsViewsByTimeDesc(getLanguage());
 		this.allYears = studentService.getAllYears();
-		this.studentViews = studentService.getStudentsByYear(Config.DEFAULTYEARS, getLanguage());
+		//		//JSONObject object =JSONObject.fromObject(year);
+		//		runLog.error("dshgkhkgdalgsklaglakgls-----sdfsfd-------" + year);
+		updateStu(Config.DEFAULTYEARS);
+		LOGGER.error(
+				"luxiongbo_testStudentSerive2" + JSON.toJSONString(this.studentViews));
+
+		LOGGER.error(
+				"luxiongbo_testStudentSerive3" + JSON.toJSONString(this.masterStuViews));
+
+		LOGGER.error(
+				"luxiongbo_testStudentSerive4" + JSON.toJSONString(this.internationalStuViews));
+
+		LOGGER.error(
+				"luxiongbo_testStudentSerive5" + JSON.toJSONString(this.phdStuViews));
+		LOGGER.error(
+				"lzh--" + JSON.toJSONString(year));
 		return "index";
+	}
+
+	@Action("ajaxt")
+	public String ajaxReturn() throws IOException {
+
+		String year = ServletActionContext.getRequest().getParameter("year");
+		updateStu(year==null?Config.DEFAULTYEARS:year);
+		JSONArray stuArray = JSONArray.fromObject(studentViews);
+		HttpServletResponse response = (HttpServletResponse) ActionContext.getContext().get(ServletActionContext.HTTP_RESPONSE);
+		response.setCharacterEncoding("UTF-8");
+		response.getWriter().print(stuArray);
+		//		LOGGER.error(
+		//				"lzh--" + JSON.toJSONString(masterStuViews));
+		return null;
 	}
 
 	@Action("exchangeL")
@@ -63,6 +112,15 @@ public class IndexAction extends BaseAction {
 		setLanguage(!getLanguage());
 		setCrtLanguage(getLanguage());
 		return index();
+	}
+
+	public void updateStu(String year) {
+		LOGGER.error("year--:" + year);
+		//year = year.trim();
+		this.studentViews = studentService.getStudentsByYear(year, getLanguage());
+		this.internationalStuViews = studentService.getInternaltionalStudentsByYear(year, getLanguage());
+		this.phdStuViews = studentService.getPHDStudentsByYear(year, getLanguage());
+		this.masterStuViews = studentService.getMasterStudentsByYear(year, getLanguage());
 	}
 
 	public boolean isCrtLanguage() {
@@ -83,6 +141,34 @@ public class IndexAction extends BaseAction {
 
 	public List<StudentSimplyView> getStudentViews() {
 		return studentViews;
+	}
+
+	public List<StudentSimplyView> getInternationalStuViews() {
+		return internationalStuViews;
+	}
+
+	public List<StudentSimplyView> getPhdStuViews() {
+		return phdStuViews;
+	}
+
+	public ResearchService getResearchService() {
+		return researchService;
+	}
+
+	public void setResearchService(ResearchService researchService) {
+		this.researchService = researchService;
+	}
+
+	public void setInternationalStuViews(List<StudentSimplyView> internationalStuViews) {
+		this.internationalStuViews = internationalStuViews;
+	}
+
+	public void setPhdStuViews(List<StudentSimplyView> phdStuViews) {
+		this.phdStuViews = phdStuViews;
+	}
+
+	public List<StudentSimplyView> getMasterStuViews() {
+		return masterStuViews;
 	}
 
 	public void setStudentViews(List<StudentSimplyView> studentViews) {

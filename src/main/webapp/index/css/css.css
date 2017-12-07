@@ -27,7 +27,6 @@ body {
 	height: auto;
 	position: fixed;
 	float: left;
-	top: 30%;
 }
 
 .left ul {
@@ -188,11 +187,17 @@ button.btn.dropdown-toggle.btn-default {
 	text-indent: 64px;
 }
 
+.heng {
+	height: auto;
+    float: left;
+    width: 100%;
+}
+
 .pro .list {
 	margin-left: 26px;
 	float: left;
 	width: auto;
-	height: 100px;
+	height: auto;
 }
 
 .list img {
@@ -202,9 +207,9 @@ button.btn.dropdown-toggle.btn-default {
 }
 
 .list p {
-	font-size: 21px;
-	margin-left: 10px;
-	margin-top: 49%;
+	font-size: 16px;
+	margin-left: 5px;
+	margin-top: 30px;
 	float: right;
 	width: auto;
 	color: #C3C3C3;
@@ -230,3 +235,4 @@ button.btn.dropdown-toggle.btn-default {
 	text-align: center;
 	font-size: 18px;
 }
+

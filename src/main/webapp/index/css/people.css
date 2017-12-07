@@ -11,10 +11,13 @@
 
 .box
 {
-	padding-top: 15px;
-	width:800px;
-	height:200px;
+    padding-top: 15px;
+    line-height: 1.5;
+    padding-bottom: 15px;
+    width: 800px;
+    height: auto;
     border-top: 2px solid #cfcfcf;
+    float: left;
 }
 
 #box3 a {
@@ -31,7 +34,14 @@
 	height:150px;
 	float:left;
 	text-align:center; 
-	padding-top:50px;
+	padding-top:0;
+	}
+	
+	#left img {
+	    float: left;
+	    width: 70%;
+	    height: 100%;
+	    margin-left: 15%;
 	}
 
 #right

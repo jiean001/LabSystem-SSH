@@ -9,6 +9,15 @@ public class StudentSimplyView {
 	private String studentname;
 	private String stupic;
 	private String edubkgrd;
+	private int edubkgrdID;
+
+	public int getEdubkgrdID() {
+		return edubkgrdID;
+	}
+
+	public void setEdubkgrdID(int edubkgrdID) {
+		this.edubkgrdID = edubkgrdID;
+	}
 
 	public StudentSimplyView(Student student, EducationBackGroundView edubkgrdView, boolean isChinese) {
 		this.studentId = student.getStudentId();
@@ -19,6 +28,7 @@ public class StudentSimplyView {
 		} else {
 			this.studentname = student.getStudentnameE();
 		}
+		this.edubkgrdID = student.getEdubkgrdId();
 	}
 
 	public Integer getStudentId() {
